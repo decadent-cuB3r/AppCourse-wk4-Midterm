@@ -1,20 +1,20 @@
 {
-    "Brands": [
-        {
-            "brand": "Honda",
-            "image": "https://i.imgur.com/4sO8k2x.png"
-        },
-        {
-            "brand": "Suzuki",
-            "image": "https://i.imgur.com/uWfNyHl.png"
-        },
-        {
-            "brand": "Yamaha",
-            "image": "https://i.imgur.com/VjLlOIQ.png"
-        },
-        {
-            "brand": "Kawasaki",
-            "image": "https://i.imgur.com/xMtep7p.png"
-        }
-    ]
+  "Brands": [
+    {
+      "brand": "Honda",
+      "image": "https://i.imgur.com/4sO8k2x.png"
+    },
+    {
+      "brand": "Suzuki",
+      "image": "https://i.imgur.com/uWfNyHl.png"
+    },
+    {
+      "brand": "Yamaha",
+      "image": "https://i.imgur.com/VjLlOIQ.png"
+    },
+    {
+      "brand": "Kawasaki",
+      "image": "https://i.imgur.com/xMtep7p.png"
+    }
+  ]
 }

@@ -1,16 +1,19 @@
-import { FlatList, ScrollView, TextInput, View } from "react-native";
+import { FlatList } from "react-native";
+import React from "react";
 
-
-export default function PopularList({navigation, data}){
+const PopularList = ({ data, navigation }) => {
     const renderItem = ({ item }) => <BookDetail data={item} navigation={navigation} />;
 
-    return(
-        <FlatList 
-            data = {data}
+    return (
+        <FlatList
+            data={data}
             renderItem={renderItem}
-            horizontal={false}
-            showsVerticalScrollIndicator={false}
-            
+            keyExtractor={item => item.title}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{ paddingHorizontal: 12 }}
         />
-    );
-};
+    )
+}
+
+export default PopularList;
