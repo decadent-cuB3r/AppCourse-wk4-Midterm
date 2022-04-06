@@ -1,0 +1,34 @@
+{
+  "brand": "Honda",
+  "nakedBikes": [
+    {
+      "brand": "Honda",
+      "model": "CB300R ABS",
+      "image": "",
+      "grade": "C+級車",
+      "rating": 4.3
+    },
+    {
+      "brand": "Honda",
+      "model": "MSX125SF ABS",
+      "grade": "M級車",
+      "rating": 4.0
+    }
+  ],
+  "raceBikes": [
+    {
+      "brand": "Honda",
+      "model": "CBR150F ABS",
+      "grade": "M級車",
+      "rating": 4.0
+    }
+  ],
+  "scooters": [
+    {
+      "brand": "Honda",
+      "model": "FORZA ABS",
+      "grade": "M級車",
+      "rating": 4.0
+    }
+  ]
+}

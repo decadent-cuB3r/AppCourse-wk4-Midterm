@@ -1,0 +1,18 @@
+{
+    "brand": "Yamaha",
+    "nakedBikes": [
+      {
+        "brand": "Yamaha",
+        "model": "CB300R ABS",
+        "grade": "C+級車",
+        "rating": 4.3
+      },
+      {
+          "brand": "Yamaha",
+          "model": "MSX125SF ABS",
+          "grade": "M級車",
+          "rating": 4.0
+      }
+    ]
+  }
+  
