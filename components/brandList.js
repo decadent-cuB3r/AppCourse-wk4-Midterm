@@ -1,5 +1,6 @@
 import { FlatList, StyleSheet, Pressable, View, Image, Text } from "react-native";
 import Brands from "../json/Brands.json";
+import BrandDetail from "./BrandDetail";
 
 
 // const BrandDetail = ({ data }) => (
@@ -27,8 +28,8 @@ import Brands from "../json/Brands.json";
 // });
 
 
-export default function BrandList({data}) {
-    const renderItem = ({ item }) => (<BrandDetail data={item} />);
+const BrandList = ({data}) => {
+    const renderItem = ({ item }) => <BrandDetail brand={item} />;
 
     return (
         <FlatList
@@ -40,3 +41,5 @@ export default function BrandList({data}) {
         />
     );
 };
+
+export default BrandList;

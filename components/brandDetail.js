@@ -1,16 +1,16 @@
 import { Pressable, View, Image, StyleSheet } from "react-native";
+import Brands from '../json/brands.json'
 
-const BrandDetail = ({data}) => {
+const BrandDetail = props => {
+    let {brand} = props;
     return (
         <Pressable style={styles.brandWrapper}>
             <View>
-                <Image source={{ uri: data.image }} style={styles.imageBox} />
+                <Image source={{ uri: Brands.Brands[0].image }} style={styles.imageBox} />
             </View>
         </Pressable>
     );
 }
-
-export default BrandDetail;
 
 const styles = StyleSheet.create({
     brandWrapper: {
@@ -24,3 +24,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
+
+export default BrandDetail;

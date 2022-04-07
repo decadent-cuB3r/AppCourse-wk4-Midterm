@@ -1,19 +1,17 @@
-import { FlatList } from "react-native";
-import React from "react";
+// import React from "react";
+// import { FlatList } from "react-native";
+// import PopularDetail from "./popularDetail";
 
-const PopularList = ({ data, navigation }) => {
-    const renderItem = ({ item }) => <BookDetail data={item} navigation={navigation} />;
+// const AlbumList = ({ list, navigation }) => {
+//   const renderItem = ({ item }) => <PopularDetail album={item} navigation={navigation} />;
+//   return (
+//     <FlatList
+//       data={list}
+//       renderItem={renderItem}
+//       keyExtractor={item => item.title}
+//     />    
+//   );  
+// }
 
-    return (
-        <FlatList
-            data={data}
-            renderItem={renderItem}
-            keyExtractor={item => item.title}
-            horizontal={true}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{ paddingHorizontal: 12 }}
-        />
-    )
-}
+// export default AlbumList;
 
-export default PopularList;
