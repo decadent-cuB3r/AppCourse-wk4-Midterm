@@ -1,10 +1,10 @@
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, Box } from "native-base";
 
 const ReservationScreen = () => {
     return (
-        <View style={styles.container}>
+        <Box style={styles.container}>
             <Text>Reservation Screen</Text>
-        </View>
+        </Box>
     );
 };
 

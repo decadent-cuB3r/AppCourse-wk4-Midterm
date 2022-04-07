@@ -1,10 +1,11 @@
+import { Box } from "native-base";
 import { Text, StyleSheet, View } from "react-native";
 
 const SettingScreen = () => {
     return (
-        <View style={styles.container}>
+        <Box style={styles.container}>
             <Text>Setting Screen</Text>
-        </View>
+        </Box>
     );
 };
 

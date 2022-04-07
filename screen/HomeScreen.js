@@ -1,20 +1,17 @@
-import { View, ScrollView, StyleSheet } from "react-native";
+import { Box, StyleSheet } from "native-base";
 import SearchBike from "../components/SearchBike";
 import BrandList from "../components/BrandList";
 import PopularList from "../components/PopularList";
 import Brands from "../json/brands.json";
 import PopularBike from "../json/popularBikes.json";
-import { max } from "react-native-reanimated";
 
 const HomeScreen = ({ navigation }) => {
     return (
-        <View style={styles.container}>
+        <Box style={styles.container}>
             <SearchBike />
-            <ScrollView showsHorizontalScrollIndicator={true} style={styles.ScrollView} >
-                <BrandList data={Brands.Brands} navigation={navigation} />
-                <PopularList list={PopularBike.Bikes} />
-            </ScrollView>
-        </View>
+            <BrandList data={Brands.Brands} navigation={navigation} />
+            <PopularList list={PopularBike.Bikes} />
+        </Box>
     );
 };
 
