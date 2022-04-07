@@ -20,15 +20,22 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: 87,
-        height: 65,
-        backgroundColor: "#000",
+        height: 70,
+        backgroundColor: "#fff",
         borderRadius: 20,
-        marginLeft: 10,
+        marginLeft: 20,
         marginRight: 10,
+        marginTop: 10,
+        marginBottom: 10,
+        shadowOpacity: 0.3,
+        shadowOffset:{
+            height: 0,
+            width: 0
+        }
     },
     imageBox: {
         flex: 1,
-        width: 56,
+        width: 87,
         alignItems: 'center',
         justifyContent: 'center'
     }

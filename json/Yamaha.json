@@ -1,18 +1,27 @@
 {
-    "brand": "Yamaha",
-    "nakedBikes": [
-      {
-        "brand": "Yamaha",
-        "model": "CB300R ABS",
-        "grade": "C+級車",
-        "rating": 4.3
-      },
-      {
-          "brand": "Yamaha",
-          "model": "MSX125SF ABS",
-          "grade": "M級車",
-          "rating": 4.0
-      }
-    ]
-  }
-  
+  "brand": "Yamaha",
+  "nakedBikes": [
+    {
+      "brand": "Yamaha",
+      "model": "CB300R ABS",
+      "grade": "C+級車",
+      "rating": 4.3,
+      "engine": null,
+      "dryWeight": "無資料",
+      "horsePower": "無資料",
+      "seatHeight": "無資料",
+      "dimensions": "無資料"
+    },
+    {
+      "brand": "Yamaha",
+      "model": "MSX125SF ABS",
+      "grade": "M級車",
+      "rating": 4.0,
+      "engine": null,
+      "dryWeight": "無資料",
+      "horsePower": "無資料",
+      "seatHeight": "無資料",
+      "dimensions": "無資料"
+    }
+  ]
+}
