@@ -1,35 +1,54 @@
-// import React from "react";
-// import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable } from "native-base"
+import { Pressable, View, Image, StyleSheet, Text } from "react-native";
 
-// const PopularDetail = ({ album, navigation }) => {
-//   return (
-//     <Box marginX={1} marginBottom={2} borderRadius={3} shadow={2}>
-//       <HStack bg='#fff'>
-//         <AspectRatio w="50" ratio={1}>
-//           <Image
-//             margin="1"
-//             source={{ uri: album.thumbnail_image }}
-//             alt="artist"
-//           />
-//         </AspectRatio>
-//         <VStack paddingLeft={2} justifyContent="space-around">
-//           <Text>{album.title}</Text>
-//           <Text>{album.artist}</Text>
-//         </VStack>
-//       </HStack>
-//       <Box p={1} bg="#fff">
-//         <Pressable 
-//           onPress={() => navigation.navigate('Detail', album)}
-//         >
-//           <AspectRatio w="100%" ratio={1}>
-//             <Image
-//               source={{ uri: album.image }}
-//               alt="album"
-//             />            
-//           </AspectRatio>
-//         </Pressable>
-//       </Box>   
-//     </Box>
-//   )};
+const PopularDetail = ({ popularBike }) => {
 
-// export default PopularDetail;
+    return (
+        <View style={styles.boxWrapper}>
+            <Pressable style={styles.infoBox}>
+                <View>
+                    <Image source={{ uri: popularBike.image }} style={styles.imageBox} />
+                </View>
+                <View>
+                    <Text>{popularBike.brand}</Text>
+                    <Text>{popularBike.model}</Text>
+                    <Text>{popularBike.grade}</Text>
+                </View>
+            </Pressable>
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    boxWrapper: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 320,
+        height: 70,
+        backgroundColor: "#fff",
+        borderRadius: 20,
+        marginLeft: 20,
+        marginRight: 4,
+        marginTop: 10,
+        marginBottom: 10,
+        shadowOpacity: 0.3,
+        shadowOffset: {
+            height: 0,
+            width: 0
+        }
+    },
+    infoBox: {
+        flex: 1,
+        flexDirection: "row",
+        
+
+    },
+    imageBox: {
+        flex: 1,
+        width: 87,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+});
+
+export default PopularDetail;

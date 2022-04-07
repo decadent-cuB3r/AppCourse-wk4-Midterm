@@ -1,0 +1,44 @@
+{
+    "Bikes": [
+      {
+        "brand": "Honda",
+        "model": "CB300R ABS",
+        "image": "https://i.imgur.com/iNGWNXB.png",
+        "grade": "C+級車",
+        "rating": 4.3,
+        "exhaust": 300,
+        "engine": "四行程水冷4V單缸",
+        "dryWeight": "139kg",
+        "horsePower": "31.4HP/8,500rpm",
+        "seatHeight": "799mm",
+        "dimensions": "2012 x 802 x 1052mm"
+      },
+      {
+        "brand": "Yamaha",
+        "model": "MT-03",
+        "image": "https://i.imgur.com/283wCAN.png",
+        "grade": "C級車",
+        "rating": 4.0,
+        "exhaust": 125,
+        "engine": null,
+        "dryWeight": "無資料",
+        "horsePower": "無資料",
+        "seatHeight": "無資料",
+        "dimensions": "無資料"
+      },
+      {
+        "brand": "Suzuki",
+        "model": "GSXR-150",
+        "image": "https://i.imgur.com/Q7NH6sT.png",
+        "grade": "C+級車",
+        "rating": 4.0,
+        "exhaust": 125,
+        "engine": null,
+        "dryWeight": "無資料",
+        "horsePower": "無資料",
+        "seatHeight": "無資料",
+        "dimensions": "無資料"
+      }
+    ]
+  }
+  

@@ -20,10 +20,10 @@ const BrandList = ({ data }) => {
 
 const styles = StyleSheet.create({
     boldText: {
-        fontWeight: "700",
+        fontWeight: "bold",
         fontSize: 18,
         marginLeft: 20,
-        marginBottom: 30
+        marginTop: 10,
     }
 });
 

@@ -1,22 +1,38 @@
+import 'react-native-gesture-handler';
 import React from 'react';
+//import Navigation dependencies
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+// import { createDrawerNavigator } from '@react-navigation/drawer';
+
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+//Home Stack Components
 import HomeScreen from '../screen/HomeScreen';
 import BrandScreen from '../screen/BrandScreen';
-import ProfileScreen from '../screen/BrandScreen';
-import FavoriteBikeScreen from '../screen/FavoriteBikesScreen';
-import ReservationScreen from '../screen/ResvervationScreen';
 import ProductScreen from '../screen/ProductScreen';
+
+//Profile Stack Components
+import ProfileScreen from '../screen/ProfileScreen';
+
+//Favorite Bike Stack Components
+import FavoriteBikeScreen from '../screen/FavoriteBikesScreen';
+
+//Reservation Stack Components
+import ReservationScreen from '../screen/ResvervationScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-const Drawer = createDrawerNavigator();
+// const Drawer = createDrawerNavigator();
 
-export default HomeStack = () => (
+const Navigation = () => (
+    <NavigationContainer>
+        <TabNavigator />
+    </NavigationContainer>
+);
+
+const HomeStack = () => (
     <Stack.Navigator>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="BrandScreen" component={BrandScreen} />
@@ -44,16 +60,17 @@ const ProfileStack = () => (
 
 const TabNavigator = () => (
     <Tab.Navigator>
-        <Tab.Screen name='HomeStackScreen' component={HomeStack} />
-        <Tab.Screen name='FavoriteBikeStackScreen' component={FavoriteStack} />
-        <Tab.Screen name='ReservationStackScreen' component={ReservationStack} />
-        <Tab.Screen name='ProfileStackScreen' component={ProfileStack} />
+        <Tab.Screen name='HomeStackScreen' component={HomeStack} options={{headerShown: false}}/>
+        <Tab.Screen name='FavoriteBikeStackScreen' component={FavoriteStack} options={{headerShown: false}}/>
+        <Tab.Screen name='ReservationStackScreen' component={ReservationStack} options={{headerShown: false}}/>
+        <Tab.Screen name='ProfileStackScreen' component={ProfileStack} options={{headerShown: false}}/>
     </Tab.Navigator>
 );
 
-const Navigation = () => (
-    <NavigationContainer>
-        <TabNavigator />
-    </NavigationContainer>
-);
+// const DrawerNavigator = () => (
+//     <Drawer.Navigator>
+//         <Drawer.Screen name={HomeTabs} component={TabNavigator} />
+//     </Drawer.Navigator>
+// );
 
+export default Navigation;

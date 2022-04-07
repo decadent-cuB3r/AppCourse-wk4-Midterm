@@ -12,7 +12,7 @@ const BrandDetail = props => {
             </Pressable>
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     brandWrapper: {
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         borderRadius: 20,
         marginLeft: 20,
-        marginRight: 10,
+        marginRight: 4,
         marginTop: 10,
         marginBottom: 10,
         shadowOpacity: 0.3,

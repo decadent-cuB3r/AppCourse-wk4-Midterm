@@ -1,10 +1,13 @@
+import 'react-native-gesture-handler';
+import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import HomeStack from './navigation/index'
+import Navigation from './navigation/index';
+
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <HomeStack />
+      <Navigation />
     </SafeAreaProvider>
   );
 }
