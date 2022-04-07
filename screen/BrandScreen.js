@@ -1,11 +1,23 @@
 import { Text, StyleSheet, View } from "react-native";
+import HondaBikes from '../json/honda.json';
+import YamahaBikes from '../json/yamaha.json';
 
-const BrandScreen = () => {
-    return (
-        <View style={styles.container}>
-            <Text>Brand Screen</Text>
-        </View>
-    );
+const BrandScreen = ({ route }) => {
+    let getJson = (route) => {
+        switch(route.params.brand){
+            case Honda:
+                return(HondaBikes);
+                break;
+            case Yamaha:
+                return(YamahaBikes);
+                break;
+            default:
+                return(null);
+        }
+    } 
+    return(
+        <Text>{getJson.nakedBikes}</Text>
+    )
 };
 
 export default BrandScreen;

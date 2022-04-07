@@ -1,8 +1,8 @@
 import { FlatList, StyleSheet, View, Text } from "react-native";
 import BrandDetail from "./BrandDetail";
 
-const BrandList = ({ data }) => {
-    const renderItem = ({ item }) => <BrandDetail brand={item} />;
+const BrandList = ({ data, navigation }) => {
+    const renderItem = ({ item }) => <BrandDetail brand={item} navigation={navigation} />;
 
     return (
         <FlatList

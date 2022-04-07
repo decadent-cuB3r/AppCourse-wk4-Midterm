@@ -5,7 +5,7 @@ import ProductScreen from "../screen/ProductScreen";
 const BrandDetail = ({ brand, navigation }) => {
     return (
         <View style={styles.brandWrapper}>
-            <Pressable>
+            <Pressable onPress={() => navigation.navigate('BrandScreen', brand)}>
                 <Image source={{ uri: brand.image }} style={styles.imageBox} />
             </Pressable>
         </View>
