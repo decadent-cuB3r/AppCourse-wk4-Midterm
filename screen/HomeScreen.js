@@ -4,7 +4,7 @@ import SearchBike from "../components/SearchBike";
 
 import Brands from "../json/brands.json";
 
-const Home = () => {
+const HomeScreen = ({ navigation }) => {
     return (
         <ScrollView showsHorizontalScrollIndicator={false}>
             <SearchBike />
@@ -15,7 +15,7 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
     container: {

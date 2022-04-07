@@ -1,6 +1,6 @@
 import { Text, StyleSheet, View } from "react-native";
 
-const ProfileScreen = () => {
+const ReservationScreen = () => {
     return (
         <View style={styles.container}>
             <Text>Reservation Screen</Text>
@@ -8,7 +8,7 @@ const ProfileScreen = () => {
     );
 };
 
-export default ProfileScreen;
+export default ReservationScreen;
 
 const styles = StyleSheet.create({
     container: {
