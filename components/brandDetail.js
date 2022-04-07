@@ -2,13 +2,11 @@ import { Pressable, View, Image, StyleSheet, Text } from "react-native";
 import Brands from '../json/brands.json'
 import ProductScreen from "../screen/ProductScreen";
 
-const BrandDetail = ({ data, navigation }) => {
+const BrandDetail = ({ brand, navigation }) => {
     return (
         <View style={styles.brandWrapper}>
-            <Pressable onPress={navigation.navigate(ProductScreen)}>
-
-                <Image source={{ uri: data.image }} style={styles.imageBox} />
-
+            <Pressable>
+                <Image source={{ uri: brand.image }} style={styles.imageBox} />
             </Pressable>
         </View>
     );

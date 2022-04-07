@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Pressable, View, Image, Text } from "react-native";
+import { FlatList, StyleSheet, View, Text } from "react-native";
 import BrandDetail from "./BrandDetail";
 
 const BrandList = ({ data }) => {
