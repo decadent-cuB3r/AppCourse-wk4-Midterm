@@ -7,7 +7,7 @@
                 {
                     "brand": "Honda",
                     "model": "CB300R ABS",
-                    "image": "",
+                    "image": "https://i.imgur.com/iNGWNXB.png",
                     "grade": "C+級車",
                     "rating": 4.3,
                     "exhaust": 300,
@@ -20,6 +20,254 @@
                 {
                     "brand": "Honda",
                     "model": "MSX125SF ABS",
+                    "image": "https://i.imgur.com/DDcmlhK.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 125,
+                    "engine": "氣冷四行程單汽缸",
+                    "dryWeight": "103 kg",
+                    "horsePower": "9.9 hp / 7,250 rpm",
+                    "seatHeight": "760 mm",
+                    "dimensions": "1760*720*1015 mm"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "CB650F",
+                    "image": "https://i.imgur.com/IBsZI9A.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 125,
+                    "engine": "水冷並列4汽缸",
+                    "dryWeight": "208 kg",
+                    "horsePower": "76.4hp/ 9,000 rpm",
+                    "seatHeight": "810mm",
+                    "dimensions": "2,130mm x 750mm x 1,150mm"
+                }
+            ],
+            "raceBikes": [
+                {
+                    "brand": "Honda",
+                    "model": "CBR150F ABS",
+                    "image": "https://i.imgur.com/PM5Fafm.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 600,
+                    "engine": null,
+                    "dryWeight": "125 kg",
+                    "horsePower": "無資料",
+                    "seatHeight": "795 mm",
+                    "dimensions": "無資料"
+                }
+            ],
+            "scooters": [
+                {
+                    "brand": "Honda",
+                    "model": "FORZA750 ABS",
+                    "image": "https://i.imgur.com/zhBjQML.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 300,
+                    "engine": "水冷並列雙汽缸",
+                    "dryWeight": "235 kg",
+                    "horsePower": "57.8hp / 6,750 rpm",
+                    "seatHeight": "790mm",
+                    "dimensions": "2,200 x 790 x 1,485 mm"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "FORZA300",
+                    "image": "https://i.imgur.com/RFW0KCN.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 300,
+                    "engine": "水冷單汽缸",
+                    "dryWeight": "186 kg",
+                    "horsePower": "29hp/ 7,500 rpm",
+                    "seatHeight": "780 mm",
+                    "dimensions": "2,145mm x 754mm x 1,505mm"
+                }
+            ]
+        },
+        {
+            "brand": "Suzuki",
+            "image": "https://i.imgur.com/LdMdVJt.png",
+            "nakedBikes": [
+                {
+                    "brand": "Suzuki",
+                    "model": "GSX-R150",
+                    "image": "https://www.suzukimotor.com.tw/images/product/gsx-r150/b57_angle_02.jpg",
+                    "grade": "C+級車",
+                    "rating": 4.3,
+                    "exhaust": 300,
+                    "engine": "四行程水冷4V單缸",
+                    "dryWeight": "139kg",
+                    "horsePower": "31.4HP/8,500rpm",
+                    "seatHeight": "799mm",
+                    "dimensions": "2012 x 802 x 1052mm"
+                },
+                {
+                    "brand": "Suzuki",
+                    "model": "MSX125SF ABS",
+                    "image": "https://i.imgur.com/DDcmlhK.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 125,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                },
+                {
+                    "brand": "Suzuki",
+                    "model": "CB650F",
+                    "image": "https://i.imgur.com/IBsZI9A.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 125,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                }
+            ],
+            "raceBikes": [
+                {
+                    "brand": "Suzuki",
+                    "model": "CBR150F ABS",
+                    "image": "https://i.imgur.com/PM5Fafm.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 600,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                }
+            ],
+            "scooters": [
+                {
+                    "brand": "Suzuki",
+                    "model": "FORZA300 ABS",
+                    "image": "https://i.imgur.com/RFW0KCN.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 300,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                },
+                {
+                    "brand": "Suzuki",
+                    "model": "FORZA750",
+                    "image": "https://i.imgur.com/zhBjQML.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 300,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                }
+            ]
+        },
+        {
+            "brand": "Yamaha",
+            "image": "https://i.imgur.com/c1sqQOQ.png",
+            "nakedBikes": [
+                {
+                    "brand": "Yamaha",
+                    "model": "MT-03",
+                    "image": "https://i.imgur.com/283wCAN.png",
+                    "grade": "C級車",
+                    "rating": 4.3,
+                    "engine": "水冷四行程橫列雙缸 4V",
+                    "dryWeight": "168kg",
+                    "horsePower": "41ps / 10,750 rpm",
+                    "seatHeight": "780mm",
+                    "dimensions": "2090 × 755 × 1070"
+                },
+                {
+                    "brand": "Yamaha",
+                    "model": "XSR700",
+                    "image": "",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                }
+            ],
+            "raceBikes": [
+                {
+                    "brand": "Honda",
+                    "model": "CBR150F ABS",
+                    "image": "",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                }
+            ],
+            "scooters": [
+                {
+                    "brand": "Honda",
+                    "model": "FORZA ABS",
+                    "image": "",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                }
+            ]
+        },
+        {
+            "brand": "Kawasaki",
+            "image": "https://i.imgur.com/uNMPDJ2.png",
+            "nakedBikes": [
+                {
+                    "brand": "Honda",
+                    "model": "CB300R ABS",
+                    "image": "https://i.imgur.com/iNGWNXB.png",
+                    "grade": "C+級車",
+                    "rating": 4.3,
+                    "exhaust": 300,
+                    "engine": "四行程水冷4V單缸",
+                    "dryWeight": "139kg",
+                    "horsePower": "31.4HP/8,500rpm",
+                    "seatHeight": "799mm",
+                    "dimensions": "2012 x 802 x 1052mm"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "MSX125SF ABS",
+                    "image": "https://i.imgur.com/DDcmlhK.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 125,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "CB650F",
+                    "image": "https://i.imgur.com/IBsZI9A.png",
                     "grade": "M級車",
                     "rating": 4.0,
                     "exhaust": 125,
@@ -34,8 +282,10 @@
                 {
                     "brand": "Honda",
                     "model": "CBR150F ABS",
+                    "image": "https://i.imgur.com/PM5Fafm.png",
                     "grade": "M級車",
                     "rating": 4.0,
+                    "exhaust": 600,
                     "engine": null,
                     "dryWeight": "無資料",
                     "horsePower": "無資料",
@@ -46,9 +296,24 @@
             "scooters": [
                 {
                     "brand": "Honda",
-                    "model": "FORZA ABS",
+                    "model": "FORZA300 ABS",
+                    "image": "https://i.imgur.com/RFW0KCN.png",
                     "grade": "M級車",
                     "rating": 4.0,
+                    "exhaust": 300,
+                    "engine": null,
+                    "dryWeight": "無資料",
+                    "horsePower": "無資料",
+                    "seatHeight": "無資料",
+                    "dimensions": "無資料"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "FORZA750",
+                    "image": "https://i.imgur.com/zhBjQML.png",
+                    "grade": "M級車",
+                    "rating": 4.0,
+                    "exhaust": 300,
                     "engine": null,
                     "dryWeight": "無資料",
                     "horsePower": "無資料",
@@ -56,42 +321,6 @@
                     "dimensions": "無資料"
                 }
             ]
-        },
-        {
-            "brand": "Suzuki",
-            "image": "https://i.imgur.com/LdMdVJt.png"
-        },
-        {
-            "brand": "Yamaha",
-            "image": "https://i.imgur.com/c1sqQOQ.png",
-            "nakedBikes": [
-                {
-                  "brand": "Yamaha",
-                  "model": "CB300R ABS",
-                  "grade": "C+級車",
-                  "rating": 4.3,
-                  "engine": null,
-                  "dryWeight": "無資料",
-                  "horsePower": "無資料",
-                  "seatHeight": "無資料",
-                  "dimensions": "無資料"
-                },
-                {
-                  "brand": "Yamaha",
-                  "model": "MSX125SF ABS",
-                  "grade": "M級車",
-                  "rating": 4.0,
-                  "engine": null,
-                  "dryWeight": "無資料",
-                  "horsePower": "無資料",
-                  "seatHeight": "無資料",
-                  "dimensions": "無資料"
-                }
-              ]
-        },
-        {
-            "brand": "Kawasaki",
-            "image": "https://i.imgur.com/uNMPDJ2.png"
         }
     ]
 }

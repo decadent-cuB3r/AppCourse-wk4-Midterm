@@ -11,7 +11,7 @@ const Navigation = () => (
     <NavigationContainer>
         <Drawer.Navigator>
             <Drawer.Screen name='HomeTab' component={TabNavigator} options={{ headerShown: false }}/>
-            <Drawer.Screen name='Setting' component={SettingScreen} options={{ headerShown: false }}/>
+            <Drawer.Screen name='Setting' component={SettingScreen} options={{ headerShown: true }}/>
         </Drawer.Navigator>
     </NavigationContainer>
 );
