@@ -1,12 +1,15 @@
 import { Text, ScrollView, StyleSheet } from "react-native";
-import PopularList from "../components/popularList";
-import BrandList from "../components/brandList";
-import Brands from "../json/Brands.json";
+import BrandList from "../components/BrandList";
+import SearchBike from "../components/SearchBike";
+
+import Brands from "../json/brands.json";
 
 const Home = () => {
     return (
         <ScrollView showsHorizontalScrollIndicator={false}>
+            <SearchBike />
             <BrandList data={Brands.Brands}/>
+            <Text>Home Screen</Text>
             {/* <PopularList /> */}
         </ScrollView>
     );
