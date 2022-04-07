@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: 320,
-        height: 70,
+        height: 200,
         backgroundColor: "#fff",
         borderRadius: 20,
         marginLeft: 20,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     infoBox: {
         flex: 1,
         flexDirection: "row",
-        
+
 
     },
     imageBox: {

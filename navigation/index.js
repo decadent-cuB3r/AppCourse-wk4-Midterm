@@ -4,7 +4,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -22,13 +22,19 @@ import FavoriteBikeScreen from '../screen/FavoriteBikesScreen';
 //Reservation Stack Components
 import ReservationScreen from '../screen/ResvervationScreen';
 
+//Setting Screen
+import SettingScreen from '../screen/SettingScreen';
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-// const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
 
 const Navigation = () => (
     <NavigationContainer>
-        <TabNavigator />
+        <Drawer.Navigator>
+            <Drawer.Screen name="home" component={TabNavigator} />
+            <Drawer.Screen name="settings" component={SettingScreen} />
+        </Drawer.Navigator>
     </NavigationContainer>
 );
 
@@ -66,11 +72,5 @@ const TabNavigator = () => (
         <Tab.Screen name='ProfileStackScreen' component={ProfileStack} options={{headerShown: false}}/>
     </Tab.Navigator>
 );
-
-// const DrawerNavigator = () => (
-//     <Drawer.Navigator>
-//         <Drawer.Screen name={HomeTabs} component={TabNavigator} />
-//     </Drawer.Navigator>
-// );
 
 export default Navigation;
