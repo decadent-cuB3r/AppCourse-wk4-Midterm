@@ -1,10 +1,10 @@
 import { Pressable, View, Image, StyleSheet, Text } from "react-native";
 
-const PopularDetail = ({ popularBike }) => {
+const PopularDetail = ({ popularBike, navigation }) => {
 
     return (
         <View style={styles.boxWrapper}>
-            <Pressable style={styles.infoBox}>
+            <Pressable style={styles.infoBox} onPress={() => navigation.navigate('ProductScreen', popularBike)} >
                 <View>
                     <Image source={{ uri: popularBike.image }} style={styles.imageBox} />
                 </View>
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: 320,
-        height: 200,
+        height: 100,
         backgroundColor: "#fff",
         borderRadius: 20,
         marginLeft: 20,

@@ -5,26 +5,16 @@ const BrandList = ({ data }) => {
     const renderItem = ({ item }) => <BrandDetail brand={item} />;
 
     return (
-        <View>
-            <Text style={styles.boldText}>品牌</Text>
-            <FlatList
-                data={data}
-                renderItem={renderItem}
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                keyExtractor={item => item.brand}
-            />
-        </View>
+        <FlatList
+            data={data}
+            renderItem={renderItem}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={item => item.brand}
+        />
     );
 };
 
-const styles = StyleSheet.create({
-    boldText: {
-        fontWeight: "bold",
-        fontSize: 18,
-        marginLeft: 20,
-        marginTop: 10,
-    }
-});
+
 
 export default BrandList;
