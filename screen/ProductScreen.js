@@ -34,22 +34,22 @@ const ProductScreen = ({ route }) => {
                         alt='Picture of bike'
                     />
                 </AspectRatio>
-                <HStack>
+                <HStack justifyContent="space-around">
                     <VStack>
-                        <Text>排氣量</Text>
-                        <Text>{exhaust}</Text>
-                        <Text>乾燥重量</Text>
-                        <Text>{dryWeight}</Text>
-                        <Text>座高</Text>
-                        <Text>{seatHeight}</Text>
+                        <Text bold fontSize="md">排氣量</Text>
+                        <Text bold fontSize="md">{exhaust}</Text>
+                        <Text bold fontSize="md">乾燥重量</Text>
+                        <Text bold fontSize="md">{dryWeight}</Text>
+                        <Text bold fontSize="md">座高</Text>
+                        <Text bold fontSize="md">{seatHeight}</Text>
                     </VStack>
                     <VStack>
-                        <Text>引擎形式</Text>
-                        <Text>{engine}</Text>
-                        <Text>最大馬力</Text>
-                        <Text>{horsePower}</Text>
-                        <Text>車長X車高X車寬</Text>
-                        <Text>{dimensions}</Text>
+                        <Text bold fontSize="md">引擎形式</Text>
+                        <Text bold fontSize="md">{engine}</Text>
+                        <Text bold fontSize="md">最大馬力</Text>
+                        <Text bold fontSize="md">{horsePower}</Text>
+                        <Text bold fontSize="md">車長X車高X車寬</Text>
+                        <Text bold fontSize="md">{dimensions}</Text>
                     </VStack>
                 </HStack>
             </ScrollView>

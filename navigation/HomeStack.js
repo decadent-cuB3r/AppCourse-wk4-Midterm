@@ -14,7 +14,7 @@ const HomeStack = () => (
             name="HomeScreen"
             component={HomeScreen}
             options={{
-                title: 'LeLe Ride'
+                title: ' '
                 
             }}
         />

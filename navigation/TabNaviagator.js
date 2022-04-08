@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-
 //import Navigation dependencies
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -16,7 +15,7 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator >
             <Tab.Screen
                 name='HomeStack'
                 component={HomeStack}
@@ -56,5 +55,6 @@ const TabNavigator = () => {
         </Tab.Navigator>
     );
 }
+
 
 export default TabNavigator;
