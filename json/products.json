@@ -12,23 +12,23 @@
                     "rating": 4.3,
                     "exhaust": 300,
                     "engine": "四行程水冷4V單缸",
-                    "dryWeight": "139kg",
-                    "horsePower": "31.4HP/8,500rpm",
-                    "seatHeight": "799mm",
-                    "dimensions": "2012 x 802 x 1052mm"
+                    "dryWeight": "139 kg",
+                    "horsePower": "31.4 hp / 8,500 rpm",
+                    "seatHeight": "799 mm",
+                    "dimensions": "2012 x 802 x 1052 mm"
                 },
                 {
                     "brand": "Honda",
-                    "model": "MSX125SF ABS",
+                    "model": "MSX125SF",
                     "image": "https://i.imgur.com/DDcmlhK.png",
                     "grade": "M級車",
-                    "rating": 4.0,
+                    "rating": 4.2,
                     "exhaust": 125,
                     "engine": "氣冷四行程單汽缸",
                     "dryWeight": "103 kg",
                     "horsePower": "9.9 hp / 7,250 rpm",
                     "seatHeight": "760 mm",
-                    "dimensions": "1760*720*1015 mm"
+                    "dimensions": "1760 x 720 x 1015 mm"
                 },
                 {
                     "brand": "Honda",
@@ -39,9 +39,9 @@
                     "exhaust": 125,
                     "engine": "水冷並列4汽缸",
                     "dryWeight": "208 kg",
-                    "horsePower": "76.4hp/ 9,000 rpm",
-                    "seatHeight": "810mm",
-                    "dimensions": "2,130mm x 750mm x 1,150mm"
+                    "horsePower": "76.4 hp / 9,000 rpm",
+                    "seatHeight": "810 mm",
+                    "dimensions": "2,130 mm x 750 mm x 1,150 mm"
                 }
             ],
             "raceBikes": [
@@ -51,18 +51,44 @@
                     "image": "https://i.imgur.com/PM5Fafm.png",
                     "grade": "M級車",
                     "rating": 4.0,
-                    "exhaust": 600,
-                    "engine": null,
-                    "dryWeight": "125 kg",
-                    "horsePower": "無資料",
-                    "seatHeight": "795 mm",
-                    "dimensions": "無資料"
+                    "exhaust": 135,
+                    "engine": "水冷四行程單缸",
+                    "dryWeight": "135 kg",
+                    "horsePower": "17.1 hp / 9,000 rpm",
+                    "seatHeight": "810 mm",
+                    "dimensions": "1,983 mm x 694 mm x 1,038 mm"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "CBR600RR",
+                    "image": "https://i.imgur.com/IIjFJLS.png",
+                    "grade": "B級車",
+                    "rating": 4.5,
+                    "exhaust": 599,
+                    "engine": "水冷四行程直列四缸",
+                    "dryWeight": "186 kg",
+                    "horsePower": "120 ps / 13,500 rpm",
+                    "seatHeight": "820 mm",
+                    "dimensions": "2,030 mm x 1,115 mm x 685 mm"
+                },
+                {
+                    "brand": "Honda",
+                    "model": "CB650F",
+                    "image": "https://i.imgur.com/IBsZI9A.png",
+                    "grade": "A級車",
+                    "rating": 4.0,
+                    "exhaust": 649,
+                    "engine": "水冷四行程四缸",
+                    "dryWeight": "208 kg",
+                    "horsePower": "75 hp / 9,000 rpm",
+                    "seatHeight": "810 mm",
+                    "dimensions": "2,110 mm x 780 mm x 1,075 mm"
                 }
             ],
             "scooters": [
                 {
                     "brand": "Honda",
-                    "model": "FORZA750 ABS",
+                    "model": "FORZA750",
                     "image": "https://i.imgur.com/zhBjQML.png",
                     "grade": "M級車",
                     "rating": 4.0,
@@ -80,7 +106,7 @@
                     "grade": "M級車",
                     "rating": 4.0,
                     "exhaust": 300,
-                    "engine": "水冷單汽缸",
+                    "engine": "水冷四行程單汽缸",
                     "dryWeight": "186 kg",
                     "horsePower": "29hp/ 7,500 rpm",
                     "seatHeight": "780 mm",

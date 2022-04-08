@@ -10,6 +10,8 @@ const BrandScreenList = ({ data, navigation }) => {
             renderItem={renderItem}
             keyExtractor={item => item.model}
             horizontal={true}
+            contentInset={{right: 20}}
+            showsHorizontalScrollIndicator={false}
         />
     );
 

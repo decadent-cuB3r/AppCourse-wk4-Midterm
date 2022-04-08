@@ -16,15 +16,15 @@
     },
     {
       "brand": "Honda",
-      "model": "MSX125SF ABS",
+      "model": "MSX125SF",
       "grade": "M級車",
       "rating": 4.0,
       "exhaust": 125,
-      "engine": null,
-      "dryWeight": "無資料",
-      "horsePower": "無資料",
-      "seatHeight": "無資料",
-      "dimensions": "無資料"
+      "engine": "四行程氣冷單缸",
+      "dryWeight": "106",
+      "horsePower": "9.65hp/7,000rpm",
+      "seatHeight": "780",
+      "dimensions": "1755 x 730 x 1000mm"
     }
   ],
   "raceBikes": [

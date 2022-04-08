@@ -10,7 +10,14 @@ const Stack = createStackNavigator();
 
 const HomeStack = () => (
     <Stack.Navigator>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            options={{
+                title: 'LeLe Ride'
+                
+            }}
+        />
         <Stack.Screen name="BrandScreen" component={BrandScreen} />
         <Stack.Screen name="ProductScreen" component={ProductScreen} />
     </Stack.Navigator>

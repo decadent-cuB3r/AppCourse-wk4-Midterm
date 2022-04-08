@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View,  StyleSheet } from "react-native";
+import { Text } from "native-base"
 import { Box } from "native-base";
 import SearchBike from "../components/SearchBike";
 import BrandList from "../components/BrandList";
@@ -11,7 +12,7 @@ const HomeScreen = ({ navigation }) => {
         <View >
             <SearchBike />
             <Box>
-                <Text style={styles.boldText}>品牌</Text>
+                <Text marginTop={4} marginLeft={5} bold fontSize="lg">品牌</Text>
                 <BrandList data={Products.Brands} navigation={navigation} />
                 <Text style={styles.boldText}>熱門車款</Text>
                 <PopularList list={PopularBike.Bikes} navigation={navigation} />
@@ -34,5 +35,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         marginLeft: 20,
         marginTop: 10,
+        marginBottom: 5
     }
 });

@@ -11,6 +11,7 @@ const BrandList = ({ data, navigation }) => {
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             keyExtractor={item => item.brand}
+            contentInset={{right: 17}}
         />
     );
 };

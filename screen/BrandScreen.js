@@ -1,4 +1,4 @@
-import { Center, Box, AspectRatio, Text, Image, HStack } from 'native-base';
+import { Center, Box, AspectRatio, Text, Image, HStack, ScrollView } from 'native-base';
 
 //import Json for getJson Api(fail)
 import HondaBikes from '../json/honda.json';
@@ -18,23 +18,25 @@ const BrandScreen = ({ route, navigation }) => {
 
     return (
         <Box>
-            <HStack>
-                <AspectRatio>
-                    <Image
-                        source={{ uri: image }}
-                        alt='Brand Logo'
-                    />
-                </AspectRatio>
-                <Text>
-                    {brand}
-                </Text>
-            </HStack>
-            <Text>街車</Text>
-            <BrandScreenList data={nakedBikes} navigation={navigation} />
-            <Text>跑車</Text>
-            <BrandScreenList data={raceBikes} navigation={navigation} />
-            <Text>速可達</Text>
-            <BrandScreenList data={scooters} navigation={navigation} />
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <HStack margin={2}>
+                    <AspectRatio>
+                        <Image
+                            source={{ uri: image }}
+                            alt='Brand Logo'
+                        />
+                    </AspectRatio>
+                    <Text bold fontSize="3xl" >
+                        {brand}
+                    </Text>
+                </HStack>
+                <Text bold fontSize="xl" marginLeft={5}>街車</Text>
+                <BrandScreenList data={nakedBikes} navigation={navigation} />
+                <Text bold fontSize="xl" marginLeft={5}>跑車</Text>
+                <BrandScreenList data={raceBikes} navigation={navigation} />
+                <Text bold fontSize="xl" marginLeft={5}>速可達</Text>
+                <BrandScreenList data={scooters} navigation={navigation} />
+            </ScrollView>
         </Box>
     )
 };

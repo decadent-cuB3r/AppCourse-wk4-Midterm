@@ -1,18 +1,37 @@
-import { Pressable, View, Image, StyleSheet, Text } from "react-native";
+import { Box, AspectRatio, Image, Text, Pressable, View, HStack, VStack } from 'native-base';
+import {StyleSheet} from "react-native";
 
 const PopularDetail = ({ popularBike, navigation }) => {
-
+    const Star = require("../assets/Star.png");
     return (
         <View style={styles.boxWrapper}>
-            <Pressable style={styles.infoBox} onPress={() => navigation.navigate('ProductScreen', popularBike)} >
-                <View>
-                    <Image source={{ uri: popularBike.image }} style={styles.imageBox} />
-                </View>
-                <View>
-                    <Text>{popularBike.brand}</Text>
-                    <Text>{popularBike.model}</Text>
-                    <Text>{popularBike.grade}</Text>
-                </View>
+            <Pressable w={320} onPress={() => navigation.navigate('ProductScreen', popularBike)} >
+                <HStack  >
+                    <AspectRatio w={140}>
+                        <Image 
+                            source={{ uri: popularBike.image }} 
+                            style={styles.imageBox} 
+                            alt='picture of bike'
+                        />
+                    </AspectRatio>
+                    <VStack justifyContent="center" marginLeft={5} w={155}>
+                        <Text fontSize="md" lineHeight="xs">{popularBike.brand}</Text>
+                        <Text bold fontSize="lg">{popularBike.model}</Text>
+                        <HStack justifyContent="space-between">
+                             <Text bold fontSize="sm" lineHeight="xs">{popularBike.grade}</Text>
+                             <HStack>
+                                <Image
+                                        source={Star}
+                                        alt='star'
+                                        marginTop={0}
+                                />
+                                <Text lineHeight="xs" bold fontSize="xs">
+                                    {popularBike.rating}
+                                </Text>
+                            </HStack>
+                        </HStack>
+                    </VStack>
+                </HStack>
             </Pressable>
         </View>
     );
@@ -21,9 +40,9 @@ const PopularDetail = ({ popularBike, navigation }) => {
 const styles = StyleSheet.create({
     boxWrapper: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 320,
+        alignItems: "center",
+        justifyContent: "center",
+        width: 350,
         height: 100,
         backgroundColor: "#fff",
         borderRadius: 20,
@@ -40,6 +59,7 @@ const styles = StyleSheet.create({
     infoBox: {
         flex: 1,
         flexDirection: "row",
+
 
 
     },
