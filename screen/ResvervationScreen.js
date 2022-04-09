@@ -1,19 +1,18 @@
-import { Text, StyleSheet, View } from "react-native";
+import SegmentedControlTab from "react-native-segmented-control-tab";
+import { Text, Box, Center } from 'native-base';
+import { useState } from "react";
 
 const ReservationScreen = () => {
+    const [state, setState] = useState(0);
+
     return (
-        <View style={styles.container}>
-            <Text>Reservation Screen</Text>
-        </View>
+        <Center>
+            <SegmentedControlTab
+                values={["First", "Second", "Third"]}
+            />
+            < Text > Reservation Screen</Text>
+        </Center >
     );
 };
 
 export default ReservationScreen;
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });

@@ -9,8 +9,8 @@ import PopularBike from "../json/popularBikes.json";
 const HomeScreen = ({ navigation }) => {
     return (
         <Box >
-            <SearchBike />
             <Box>
+                <SearchBike />
                 <Text marginTop={4} marginLeft={5} bold fontSize="lg">品牌</Text>
                 <BrandList data={Products.Brands} navigation={navigation} />
                 <Text style={styles.boldText}>熱門車款</Text>

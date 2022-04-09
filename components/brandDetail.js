@@ -1,6 +1,4 @@
 import { Pressable, View, Image, StyleSheet, Text } from "react-native";
-import Brands from '../json/brands.json'
-import ProductScreen from "../screen/ProductScreen";
 
 const BrandDetail = ({ brand, navigation }) => {
     return (

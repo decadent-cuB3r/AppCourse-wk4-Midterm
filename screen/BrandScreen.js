@@ -1,9 +1,5 @@
 import { Center, Box, AspectRatio, Text, Image, HStack, ScrollView } from 'native-base';
 
-//import Json for getJson Api(fail)
-import HondaBikes from '../json/honda.json';
-import YamahaBikes from '../json/yamaha.json';
-
 //import components
 import BrandScreenList from '../components/BrandScreenList';
 

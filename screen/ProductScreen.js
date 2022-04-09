@@ -52,6 +52,16 @@ const ProductScreen = ({ route }) => {
                         <Text bold fontSize="md">{dimensions}</Text>
                     </VStack>
                 </HStack>
+                <HStack justifyContent="space-between">
+                    <VStack>
+                        <Text>費用計算</Text>
+                        <Text>基本金額</Text>
+                    </VStack>
+                    <VStack>
+                        <Text>TWD 550</Text>
+                    </VStack>
+                </HStack>
+                
             </ScrollView>
         </Center>
     );
