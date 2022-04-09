@@ -1,4 +1,3 @@
-import { StyleSheet } from "react-native";
 import { Text, ScrollView } from "native-base"
 import SearchBike from "../components/SearchBike";
 import BrandList from "../components/BrandList";
@@ -8,11 +7,11 @@ import PopularBike from "../json/popularBikes.json";
 
 const HomeScreen = ({ navigation }) => {
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
             <SearchBike />
-            <Text marginTop={4} marginLeft={5} bold fontSize="lg">品牌</Text>
+            <Text bold fontSize="2xl" marginLeft="1.5" >品牌</Text>
             <BrandList data={Products.Brands} navigation={navigation} />
-            <Text style={styles.boldText}>熱門車款</Text>
+            <Text bold fontSize="2xl" marginLeft="1.5" >熱門車款</Text>
             <PopularList list={PopularBike.Bikes} navigation={navigation} />
         </ScrollView>
 
@@ -20,19 +19,3 @@ const HomeScreen = ({ navigation }) => {
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: 900,
-        width: "100%"
-    },
-    boldText: {
-        fontWeight: "bold",
-        fontSize: 18,
-        marginLeft: 20,
-        marginTop: 10,
-        marginBottom: 5
-    }
-});

@@ -6,6 +6,9 @@ import HomeScreen from '../screen/HomeScreen';
 import BrandScreen from '../screen/BrandScreen';
 import ProductScreen from '../screen/ProductScreen';
 
+//import community icon
+import IonIcons from 'react-native-vector-icons/Ionicons';
+
 const Stack = createStackNavigator();
 
 const HomeStack = () => (
@@ -14,8 +17,10 @@ const HomeStack = () => (
             name="HomeScreen"
             component={HomeScreen}
             options={{
-                title: ' '
-                
+                title: '',
+                headerLeft: () => {
+                    <IonIcons name="menu"/>
+                }
             }}
         />
         <Stack.Screen name="BrandScreen" component={BrandScreen} />
