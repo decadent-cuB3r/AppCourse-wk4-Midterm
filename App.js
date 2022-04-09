@@ -4,13 +4,18 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { NativeBaseProvider } from 'native-base';
 import Navigation from './navigation/DrawerNavigator';
 
+//create store for favorite bikes
+import store from './store/store';
+import { Provider } from 'react-redux';
 
 export default function App() {
   return (
-    <NativeBaseProvider>
-      <SafeAreaProvider>
-        <Navigation />
-      </SafeAreaProvider>
-    </NativeBaseProvider>
+    <Provider store={store}>
+      <NativeBaseProvider>
+        <SafeAreaProvider>
+          <Navigation />
+        </SafeAreaProvider>
+      </NativeBaseProvider>
+    </Provider>
   );
 }

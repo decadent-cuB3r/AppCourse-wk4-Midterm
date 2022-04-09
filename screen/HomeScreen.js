@@ -1,6 +1,5 @@
-import { View,  StyleSheet } from "react-native";
-import { Text } from "native-base"
-import { Box } from "native-base";
+import { StyleSheet } from "react-native";
+import { Text, Box } from "native-base"
 import SearchBike from "../components/SearchBike";
 import BrandList from "../components/BrandList";
 import PopularList from "../components/PopularList";
@@ -9,7 +8,7 @@ import PopularBike from "../json/popularBikes.json";
 
 const HomeScreen = ({ navigation }) => {
     return (
-        <View >
+        <Box >
             <SearchBike />
             <Box>
                 <Text marginTop={4} marginLeft={5} bold fontSize="lg">品牌</Text>
@@ -17,7 +16,7 @@ const HomeScreen = ({ navigation }) => {
                 <Text style={styles.boldText}>熱門車款</Text>
                 <PopularList list={PopularBike.Bikes} navigation={navigation} />
             </Box>
-        </View>
+        </Box>
     );
 };
 
