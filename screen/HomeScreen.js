@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Text, Box } from "native-base"
+import { Text, ScrollView } from "native-base"
 import SearchBike from "../components/SearchBike";
 import BrandList from "../components/BrandList";
 import PopularList from "../components/PopularList";
@@ -8,15 +8,14 @@ import PopularBike from "../json/popularBikes.json";
 
 const HomeScreen = ({ navigation }) => {
     return (
-        <Box >
-            <Box>
-                <SearchBike />
-                <Text marginTop={4} marginLeft={5} bold fontSize="lg">品牌</Text>
-                <BrandList data={Products.Brands} navigation={navigation} />
-                <Text style={styles.boldText}>熱門車款</Text>
-                <PopularList list={PopularBike.Bikes} navigation={navigation} />
-            </Box>
-        </Box>
+        <ScrollView>
+            <SearchBike />
+            <Text marginTop={4} marginLeft={5} bold fontSize="lg">品牌</Text>
+            <BrandList data={Products.Brands} navigation={navigation} />
+            <Text style={styles.boldText}>熱門車款</Text>
+            <PopularList list={PopularBike.Bikes} navigation={navigation} />
+        </ScrollView>
+
     );
 };
 

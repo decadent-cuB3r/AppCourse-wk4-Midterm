@@ -1,13 +1,14 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { Center, Box} from 'native-base';
 import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import IonIcons from 'react-native-vector-icons/Ionicons'; 
 
 const SearchBike = () => {
     return (
-        <View style={styles.SearchWrapper}>
+        <Center>
             <Text style={styles.SearchPrompt}>尋找你的愛車</Text>
             <Text style={styles.SearchPrompt}>開啟一趟快樂新旅程！</Text>
-            <View style={styles.SearchBox}>
+            <Box style={styles.SearchBox}>
                 <IonIcons name="search" color={color} size={28} style={styles.SearchIcon} />
                 <TextInput
                 
@@ -15,23 +16,14 @@ const SearchBike = () => {
                     style={styles.SerachInput}
                 />
                 <IonIcons name="options" color={color} size={28} style={styles.SearchIcon} />
-            </View>
-        </View>
+            </Box>
+        </Center>
     );
 }
 
 export default SearchBike;
 
 const styles = StyleSheet.create({
-    SearchWrapper: {
-        backgroundColor: "#F9595F",
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
-        height: 156,
-        alignItems: 'baseline',
-        justifyContent: 'center',
-        paddingLeft: 20
-    },
     SearchPrompt: {
         color: "#FFF",
         fontSize: 24,

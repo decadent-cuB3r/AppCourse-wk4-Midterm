@@ -1,6 +1,5 @@
 import React from "react";
-import { FlatList, StyleSheet, Text } from "react-native";
-import { View } from "react-native";
+import { FlatList } from "react-native";
 import PopularDetail from "./PopularDetail";
 
 const PopularList = ({ list, navigation }) => {
