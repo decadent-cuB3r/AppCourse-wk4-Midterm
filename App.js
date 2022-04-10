@@ -5,7 +5,7 @@ import { NativeBaseProvider } from 'native-base';
 import Navigation from './navigation/DrawerNavigator';
 
 //create store for favorite bikes
-import store from './store/store';
+import store from './redux/store';
 import { Provider } from 'react-redux';
 
 export default function App() {

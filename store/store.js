@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import addFavoriteBike from  "../actions/actions";
-import ADD_FAVORITE_BIKE from "../utils/constants";
+import ADD_FAVORITE_BIKE from "../../utils/constants";
 
 const initialFavoriteBike = { favoriteBike: null };
 
