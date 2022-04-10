@@ -16,12 +16,12 @@ const HomeStack = () => (
         <Stack.Screen
             name="HomeScreen"
             component={HomeScreen}
-            options={{
-                title: '',
-                headerLeft: () => {
-                    <IonIcons name="menu"/>
-                }
-            }}
+            options={({ navigation }) => ({
+                title: 'LeLe Ride',
+                headerLeft: () => (
+                  <IonIcons name="menu" size={24} onPress={() => navigation.toggleDrawer()} />
+                ),
+              })}
         />
         <Stack.Screen name="BrandScreen" component={BrandScreen} />
         <Stack.Screen name="ProductScreen" component={ProductScreen} />

@@ -13,7 +13,7 @@ const BrandScreen = ({ route, navigation }) => {
     } = route.params;
 
     return (
-        <Box>
+
             <ScrollView showsVerticalScrollIndicator={false}>
                 <HStack margin={2}>
                     <AspectRatio>
@@ -33,7 +33,6 @@ const BrandScreen = ({ route, navigation }) => {
                 <Text bold fontSize="xl" marginLeft={5}>速可達</Text>
                 <BrandScreenList data={scooters} navigation={navigation} />
             </ScrollView>
-        </Box>
     )
 };
 
