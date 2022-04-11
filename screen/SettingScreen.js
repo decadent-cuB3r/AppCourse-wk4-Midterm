@@ -1,14 +1,17 @@
 import React from 'react';
 import { Box, Center, Switch, HStack, Text, useColorMode } from 'native-base';
+import { useTheme } from '@react-navigation/native';
 
 const DisplaySettingScreen = () => {
+   const { colors } = useTheme();
    const { colorMode, toggleColorMode } = useColorMode();
+   
 
    return (
       <Box
          flex={1}
-         _dark={{ bg: "blueGray.900" }}
-         _light={{ bg: "blueGray.50" }}
+         _dark={{ bgColor: colors.BG400 }}
+         _light={{ bgColor: colors.BG400 }}
       >
          <Center
             shadow={2} width="90%"
