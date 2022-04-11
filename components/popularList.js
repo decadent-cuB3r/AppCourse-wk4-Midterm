@@ -10,6 +10,7 @@ const PopularList = ({ list, navigation }) => {
       renderItem={renderItem}
       keyExtractor={item => item.ID}
     />
+
   );
 };
 
