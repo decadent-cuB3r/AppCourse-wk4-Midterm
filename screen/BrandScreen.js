@@ -1,7 +1,7 @@
 import { Center, Box, AspectRatio, Text, Image, HStack, ScrollView } from 'native-base';
 
 //import components
-import BrandScreenList from '../components/BrandScreenList';
+import BrandScreenList from '../components/brandScreenList';
 
 const BrandScreen = ({ route, navigation }) => {
     const {

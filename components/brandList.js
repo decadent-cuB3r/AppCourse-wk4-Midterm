@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet, View, Text } from "react-native";
-import BrandDetail from "./BrandDetail";
+import BrandDetail from "./brandDetail";
 
 const BrandList = ({ data, navigation }) => {
     const renderItem = ({ item }) => <BrandDetail brand={item} navigation={navigation} />;

@@ -1,6 +1,6 @@
 import React from "react";
-import { FlatList, Text } from "native-base";
-import PopularDetail from "./PopularDetail";
+import { FlatList } from "native-base";
+import PopularDetail from "./popularDetail";
 
 const PopularList = ({ list, navigation }) => {
   const renderItem = ({ item }) => <PopularDetail popularBike={item} navigation={navigation} />;

@@ -1,5 +1,5 @@
 import { FlatList } from "native-base";
-import BrandScreenDetail from "./BrandScreenDetail";
+import BrandScreenDetail from "./brandScreenDetail";
 
 const BrandScreenList = ({ data, navigation }) => {
     const renderItem = ({ item }) => <BrandScreenDetail data={item} navigation={navigation} />;

@@ -1,4 +1,4 @@
-import { Center, ScrollView, Box, AspectRatio, Text, Heading, Image, Button, HStack, VStack } from "native-base";
+import { Center, ScrollView, AspectRatio, Text, Image, HStack, VStack } from "native-base";
 
 const ProductScreen = ({ route }) => {
     const {

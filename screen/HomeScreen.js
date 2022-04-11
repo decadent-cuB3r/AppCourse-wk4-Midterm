@@ -1,8 +1,7 @@
-import { Text, ScrollView, Box } from "native-base"
-import { SafeAreaView } from "react-native-safe-area-context";
-import SearchBike from "../components/SearchBike";
-import BrandList from "../components/BrandList";
-import PopularList from "../components/PopularList";
+import { Text, ScrollView } from "native-base"
+import SearchBike from "../components/searchBike";
+import BrandList from "../components/brandList";
+import PopularList from "../components/popularList";
 import Products from '../json/products.json'
 import PopularBike from "../json/popularBikes.json";
 
