@@ -24,9 +24,9 @@ const HomeScreen = ({ navigation }) => {
     return (
         <VirtualizedList>
             <SearchBike />
-            <Text bold fontSize="2xl" marginLeft="1.5" >品牌</Text>
+            <Text bold fontSize="xl" marginLeft={5} marginTop={2} >品牌</Text>
             <BrandList data={Products.Brands} navigation={navigation} />
-            <Text bold fontSize="2xl" marginLeft="1.5" >熱門車款</Text>
+            <Text bold fontSize="xl" marginLeft={5} >熱門車款</Text>
             <PopularList list={PopularBike.Bikes} navigation={navigation} />
         </VirtualizedList>
     );
