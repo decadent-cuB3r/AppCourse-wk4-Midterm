@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 //import Drawer components
@@ -16,10 +16,10 @@ import { useColorMode } from 'native-base';
 const Drawer = createDrawerNavigator();
 
 const Navigation = () => {
-    const colorMode = useColorMode();
+    const {colorMode} = useColorMode();
     const myTheme = colorMode == "light" ? lightTheme : darkTheme;
     const colors = myTheme.colors;
-    console.log(colorMode);
+    console.log(colorMode.setColorMode);
     return (
         <NavigationContainer theme={myTheme}>
             <Drawer.Navigator
