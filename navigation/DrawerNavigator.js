@@ -31,7 +31,10 @@ const Navigation = () => {
             <Drawer.Navigator
                 screenOptions={
                     {
-                        backgroundColor: "white"
+                        backgroundColor: "white",
+                        drawerActiveBackgroundColor: '#F9595F',
+                        drawerActiveTintColor: '#FFF',
+                        drawerInactiveTintColor: '#989898',
                     }
                 }
             >
@@ -41,7 +44,7 @@ const Navigation = () => {
                     options={
                         {
                             headerShown: false,
-                            drawerIcon: () => <Ionicons name='home-sharp' size={30} />
+                            drawerIcon: ({color}) => <Ionicons name='home-sharp' color={color} size={25} />
                         }
                     }
                 />
@@ -51,7 +54,7 @@ const Navigation = () => {
                     options={
                         {
                             headerShown: true,
-                            drawerIcon: () => <Ionicons name='settings-sharp' size={30} />
+                            drawerIcon: ({color}) => <Ionicons name='settings-sharp' color={color} size={25} />
                         }
                     }
                 />

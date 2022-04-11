@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 //import Navigation dependencies
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import {View} from 'react-native'
 //import Stacks for Tab component
 import HomeStack from './HomeStack';
 import ProfileStack from './ProfileStack';
@@ -15,14 +15,21 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
     return (
-        <Tab.Navigator >
+        <Tab.Navigator 
+            screenOptions={{
+                tabBarStyle: { height: 90 },
+                tabBarInactiveTintColor: '#989898',
+                tabBarActiveTintColor: '#F9595F',
+            }}
+        >
             <Tab.Screen
                 name='HomeStack'
                 component={HomeStack}
                 options={{
+                    
                     headerShown: false,
-                    title: 'Home',
-                    tabBarIcon: () => <Icon name='home' size={26} />
+                    title: '',
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='home' color={color} size={38} /></View>
                 }}
             />
             <Tab.Screen
@@ -30,8 +37,9 @@ const TabNavigator = () => {
                 component={FavoriteStack}
                 options={{
                     headerShown: false,
-                    title: "Favorite",
-                    tabBarIcon: () => <Icon name='heart' size={26} />
+                    title: "",
+                    
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='heart' color={color} size={35} /></View>
                 }}
             />
             <Tab.Screen
@@ -39,8 +47,8 @@ const TabNavigator = () => {
                 component={ReservationStack}
                 options={{
                     headerShown: false,
-                    title: "Reserved",
-                    tabBarIcon: () => <Icon name='book-open' size={26} />
+                    title: "",
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='book-open' color={color} size={35} /></View>
                 }}
             />
             <Tab.Screen
@@ -48,8 +56,8 @@ const TabNavigator = () => {
                 component={ProfileStack}
                 options={{
                     headerShown: false,
-                    title: "Profile",
-                    tabBarIcon: () => <Icon name='account-circle' size={26} />
+                    title: "",
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='account-circle' color={color} size={35} /></View>
                 }}
             />
         </Tab.Navigator>
