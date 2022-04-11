@@ -2,14 +2,13 @@ import { DefaultTheme, DarkTheme } from "@react-navigation/native";
 
 export const lightTheme = {
   ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
+  customColors: {
     // Grey / Inactived
     grey100: "#666666",
     //blackpink / activated
     pink100: "#F9595F",
     // Background
-    BG400: "#FFFFFF",
+    background: 'rgb(0, 0, 0)',
     // Componenet bg
     comBG100: "#FFFFFF",
     //　Componenet Primary color
@@ -28,7 +27,7 @@ export const darkTheme = {
     //blackpink / activated
     pink100: "#F9595F",
     // Background
-    BG400: "#161E29",
+    bg: "#161E29",
     // Component bg
     comBG100: "#232F3F",
     // Component Primary color

@@ -10,8 +10,8 @@ const DisplaySettingScreen = () => {
    return (
       <Box
          flex={1}
-         _dark={{ bgColor: colors.BG400 }}
-         _light={{ bgColor: colors.BG400 }}
+         _light={{ bgColor: colors.grey100 }}
+         _dark={{ bgColor: colors.grey100 }}
       >
          <Center
             shadow={2} width="90%"

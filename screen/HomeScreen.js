@@ -5,6 +5,7 @@ import PopularList from "../components/popularList";
 import Products from '../json/products.json'
 import PopularBike from "../json/popularBikes.json";
 import VirtualList from "../json/virtualList.json"
+import { useTheme } from "@react-navigation/native";
 
 const VirtualizedList = ({ children }) => {
     return (
@@ -21,14 +22,16 @@ const VirtualizedList = ({ children }) => {
 
 
 const HomeScreen = ({ navigation }) => {
+    const { colors } = useTheme();
+
     return (
-        <VirtualizedList>
-            <SearchBike />
-            <Text bold fontSize="xl" marginLeft={5} marginTop={2} >品牌</Text>
-            <BrandList data={Products.Brands} navigation={navigation} />
-            <Text bold fontSize="xl" marginLeft={5} >熱門車款</Text>
-            <PopularList list={PopularBike.Bikes} navigation={navigation} />
-        </VirtualizedList>
+        <ScrollView >
+                <SearchBike />
+                <Text bold fontSize="2xl" marginLeft="1.5" >品牌</Text>
+                <BrandList data={Products.Brands} navigation={navigation} />
+                <Text bold fontSize="2xl" marginLeft="1.5" >熱門車款</Text>
+                <PopularList list={PopularBike.Bikes} navigation={navigation} />
+        </ScrollView>
     );
 };
 

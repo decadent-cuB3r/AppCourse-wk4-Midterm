@@ -10,7 +10,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 //import theme
 import { lightTheme, darkTheme } from '../myTheme/myTheme';
-import { StatusBar, useColorMode } from 'native-base';
+import { useColorMode } from 'native-base';
 
 
 const Drawer = createDrawerNavigator();
@@ -19,16 +19,9 @@ const Navigation = () => {
     const colorMode = useColorMode();
     const myTheme = colorMode == "light" ? lightTheme : darkTheme;
     const colors = myTheme.colors;
+    console.log(colorMode);
     return (
         <NavigationContainer theme={myTheme}>
-            <StatusBar
-                barStyle={
-                    colorMode == "light" ? "light-content" : "dark-content"
-                }
-                backgroundColor={
-                    colorMode == "light" ? colors.BG400 : colors.grey100
-                }
-            />
             <Drawer.Navigator
                 screenOptions={
                     {
