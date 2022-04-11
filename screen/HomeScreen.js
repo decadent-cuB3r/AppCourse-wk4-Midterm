@@ -10,7 +10,7 @@ const VirtualizedList = ({ children }) => {
     return (
         <FlatList
             data={[]}
-            keyExtractor={children.key}
+            keyExtractor={children => children.key}
             renderItem={null}
             ListHeaderComponent={
                 <>{children}</>
@@ -22,7 +22,7 @@ const VirtualizedList = ({ children }) => {
 
 const HomeScreen = ({ navigation }) => {
     return (
-        <VirtualizedList children={VirtualList.list}>
+        <VirtualizedList>
             <SearchBike />
             <Text bold fontSize="2xl" marginLeft="1.5" >品牌</Text>
             <BrandList data={Products.Brands} navigation={navigation} />
