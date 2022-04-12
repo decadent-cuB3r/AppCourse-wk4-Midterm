@@ -56,13 +56,7 @@ const HomeStack = () => {
         component={BrandScreen}
         options={{
           title:"",
-          headerRight: () => (
-            <IonIcons
-              name='notifications'
-              size={24}
-              color={colors.text}
-            />
-          ),
+
           headerRightContainerStyle: { paddingRight: 12 }
         }}
       />

@@ -5,7 +5,7 @@ import IonIcons from 'react-native-vector-icons/Ionicons';
 
 const SearchBike = () => {
     return (
-        <Center backgroundColor="#F9595F" roundedBottomLeft="20" roundedBottomRight="20" h="136" >
+        <Center backgroundColor="#F9595F" roundedBottomLeft="20" roundedBottomRight="20" h="150" >
             <Box width="90%">
                 <Text style={styles.SearchPrompt}>尋找你的愛車</Text>
                 <Text style={styles.SearchPrompt}>開啟一趟快樂新旅程！</Text>
