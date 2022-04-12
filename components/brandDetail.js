@@ -1,10 +1,20 @@
-import { Pressable, View, Image, StyleSheet, Text } from "react-native";
+import { Pressable, View, Image, Text } from "native-base";
+import {StyleSheet} from "react-native";
+import { useTheme } from "@react-navigation/native";
 
 const BrandDetail = ({ brand, navigation }) => {
+    const { colors }  = useTheme();
+    
     return (
         <View style={styles.brandWrapper}>
-            <Pressable onPress={() => navigation.navigate('BrandScreen', brand)}>
-                <Image source={{ uri: brand.image }} style={styles.imageBox} />
+            <Pressable 
+            w={87}
+            h={70}
+            borderRadius={20}
+            _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
+            _light={{ bg: "white" }}
+            onPress={() => navigation.navigate('BrandScreen', brand)}>
+                <Image source={{ uri: brand.image }} style={styles.imageBox} alt="brand logo"/>
             </Pressable>
         </View>
     );

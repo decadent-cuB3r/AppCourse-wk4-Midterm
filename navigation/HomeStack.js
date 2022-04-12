@@ -9,23 +9,72 @@ import ProductScreen from '../screen/ProductScreen';
 //import community icon
 import IonIcons from 'react-native-vector-icons/Ionicons';
 
+//theme and colors
+import { useTheme } from "@react-navigation/native";
+import { useColorMode } from "native-base";
+import { TouchableOpacity } from "react-native-gesture-handler";
+
+
+//stack initial
 const Stack = createStackNavigator();
 
-const HomeStack = () => (
-    <Stack.Navigator>
-        <Stack.Screen
-            name="HomeScreen"
-            component={HomeScreen}
-            options={({ navigation }) => ({
-                title: 'LeLe Ride',
-                headerLeft: () => (
-                  <IonIcons name="menu" size={24} onPress={() => navigation.toggleDrawer()} />
-                ),
-              })}
-        />
-        <Stack.Screen name="BrandScreen" component={BrandScreen} />
-        <Stack.Screen name="ProductScreen" component={ProductScreen} />
+const HomeStack = () => {
+  const { colors } = useTheme();
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: colors.text
+      }}
+    >
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={({ navigation }) => ({
+          title: '',
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+              <IonIcons
+                name="menu"
+                color={colors.text}
+                size={24}
+              />
+            </TouchableOpacity>
+          ),
+          headerLeftContainerStyle: { paddingLeft: 12 },
+          headerRight: () => (
+            <IonIcons
+              name='notifications'
+              size={24}
+              color={colors.text}
+            />
+          ),
+          headerRightContainerStyle: { paddingRight: 12 }
+        })}
+      />
+      <Stack.Screen
+        name="BrandScreen"
+        component={BrandScreen}
+        options={{
+          title:"",
+          headerRight: () => (
+            <IonIcons
+              name='notifications'
+              size={24}
+              color={colors.text}
+            />
+          ),
+          headerRightContainerStyle: { paddingRight: 12 }
+        }}
+      />
+      <Stack.Screen
+      options={{
+        title:""
+      }}
+        name="ProductScreen"
+        component={ProductScreen}
+      />
     </Stack.Navigator>
-);
+  );
+};
 
 export default HomeStack;

@@ -1,14 +1,17 @@
 import React from 'react';
 import { Box, Center, Switch, HStack, Text, useColorMode } from 'native-base';
+import { useTheme } from '@react-navigation/native';
 
-const DisplaySettingScreen = () => {
+const SettingScreen = () => {
+   const { colors } = useTheme();
    const { colorMode, toggleColorMode } = useColorMode();
+   
 
    return (
       <Box
          flex={1}
-         _dark={{ bg: "blueGray.900" }}
-         _light={{ bg: "blueGray.50" }}
+         _light={{ bgColor: colors.comBG100 }}
+         _dark={{ bgColor: colors.background }}
       >
          <Center
             shadow={2} width="90%"
@@ -24,6 +27,7 @@ const DisplaySettingScreen = () => {
                   name="light Mode"
                   isChecked={colorMode === "light"}
                   onToggle={toggleColorMode}
+                  trackColor={{true: "#F9595F",false:"#989898"}}
                   accessibilityLabel="display-mode"
                   accessibilityHint="light or dark mode"
                />
@@ -34,4 +38,4 @@ const DisplaySettingScreen = () => {
    );
 };
 
-export default DisplaySettingScreen;
+export default SettingScreen;
