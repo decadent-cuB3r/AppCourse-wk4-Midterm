@@ -23,7 +23,7 @@ const BrandScreenDetail = ({ data, navigation }) => {
                             width="130"
                             justifyContent="center"                        />
                     </AspectRatio>
-                    <Text  fontSize="sm" lineHeight="xs">
+                    <Text  fontSize="sm" lineHeight="xs" color="#989898">
                         {data.brand}
                     </Text>
                     <Text bold fontSize="md" lineHeight="xs">
