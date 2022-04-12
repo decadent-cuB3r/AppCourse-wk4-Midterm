@@ -23,7 +23,7 @@ const HomeStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerTintColor: colors.grey100
+        headerTintColor: colors.text
       }}
     >
       <Stack.Screen
@@ -55,6 +55,7 @@ const HomeStack = () => {
         name="BrandScreen"
         component={BrandScreen}
         options={{
+          title:"",
           headerRight: () => (
             <IonIcons
               name='notifications'
@@ -66,6 +67,9 @@ const HomeStack = () => {
         }}
       />
       <Stack.Screen
+      options={{
+        title:""
+      }}
         name="ProductScreen"
         component={ProductScreen}
       />
