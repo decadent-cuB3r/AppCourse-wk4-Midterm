@@ -13,7 +13,7 @@ const BrandScreenDetail = ({ data, navigation }) => {
                             alt='picture of bike'
                             justifyContent="center"                        />
                     </AspectRatio>
-                    <Text  fontSize="sm" lineHeight="xs">
+                    <Text  fontSize="sm" lineHeight="xs" color="#989898">
                         {data.brand}
                     </Text>
                     <Text bold fontSize="md" lineHeight="xs">

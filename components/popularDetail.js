@@ -15,7 +15,7 @@ const PopularDetail = ({ popularBike, navigation }) => {
                         />
                     </AspectRatio>
                     <VStack justifyContent="center" marginLeft={5} w={155}>
-                        <Text fontSize="md" lineHeight="xs">{popularBike.brand}</Text>
+                        <Text fontSize="md" lineHeight="xs" color="#989898">{popularBike.brand}</Text>
                         <Text bold fontSize="lg">{popularBike.model}</Text>
                         <HStack justifyContent="space-between">
                              <Text bold fontSize="sm" lineHeight="xs">{popularBike.grade}</Text>
