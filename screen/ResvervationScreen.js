@@ -39,11 +39,11 @@ const ReservationScreen = () => {
                     marginTop: 10, borderColor: colorMode == "light" ? colors.primary700 : colors.primary700,
                     borderWidth: 2,
                     backgroundColor: null,
-                    height: 32
+                    height: 35
                 }}
                 firstTabStyle={{ marginLeft: 20 }}
                 lastTabStyle={{ marginRight: 20 }}
-                tabTextStyle={{ fontSize: 16, color: colorMode == "light" ? colors.primary700 : colors.primary700, }}
+                tabTextStyle={{ fontSize: 14, color: colorMode == "light" ? colors.primary700 : colors.primary700, }}
                 activeTabStyle={{ backgroundColor: colorMode == "light" ? colors.primary700 : colors.primary700 }}
                 activeTabTextStyle={{ color: "white" }}
                 selectedIndex={selectedIndex}

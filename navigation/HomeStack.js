@@ -43,7 +43,7 @@ const HomeStack = () => {
           headerLeftContainerStyle: { paddingLeft: 12 },
           headerRight: () => (
             <IonIcons
-              name='notifications'
+              name='notifications-outline'
               size={24}
               color={colors.text}
             />

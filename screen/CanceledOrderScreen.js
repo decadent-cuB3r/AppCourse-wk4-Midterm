@@ -3,8 +3,8 @@ import { Center, Text } from "native-base";
 export default CanceledOrderScreen = () => {
 
     return(
-        <Center>
-            <Text>已取消</Text>
+        <Center height="90%">
+            <Text bold>查無資料</Text>
         </Center>
     );
 };

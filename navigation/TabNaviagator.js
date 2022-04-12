@@ -29,7 +29,7 @@ const TabNavigator = () => {
                     
                     headerShown: false,
                     title: '首頁',
-                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='home' color={color} size={38} /></View>
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='home' color={color} size={35} /></View>
                 }}
             />
             <Tab.Screen
@@ -39,7 +39,7 @@ const TabNavigator = () => {
                     headerShown: false,
                     title: "我的收藏",
                     
-                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='heart' color={color} size={35} /></View>
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='heart' color={color} size={32} /></View>
                 }}
             />
             <Tab.Screen
@@ -48,7 +48,7 @@ const TabNavigator = () => {
                 options={{
                     headerShown: false,
                     title: "我的訂單",
-                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='book-open' color={color} size={35} /></View>
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='book-open' color={color} size={32} /></View>
                 }}
             />
             <Tab.Screen
@@ -57,7 +57,7 @@ const TabNavigator = () => {
                 options={{
                     headerShown: false,
                     title: "會員專區",
-                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='account-circle' color={color} size={35} /></View>
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='account-circle' color={color} size={32} /></View>
                 }}
             />
         </Tab.Navigator>

@@ -2,8 +2,8 @@ import { Center, Text } from "native-base";
 
 export default MyOrdersScreen = () => {
     return(
-        <Center>
-            <Text>已下單</Text>
+        <Center height="90%">
+            <Text bold>尚無訂單</Text>
         </Center>
     );
 };

@@ -6,8 +6,14 @@ import {
   Image,
   HStack,
   VStack,
+  Button,
+  Select,
+  FormControl,
+  CheckIcon, 
+  Box
 } from "native-base";
 import { StyleSheet } from "react-native";
+import React from "react";
 
 const ProductScreen = ({ route }) => {
   const {
@@ -26,7 +32,10 @@ const ProductScreen = ({ route }) => {
   const Star = require("../assets/Star.png");
   return (
     <Center>
-      <ScrollView width="90%">
+      <ScrollView 
+      width="90%"
+      showsVerticalScrollIndicator={false}
+      >
         <VStack marginTop={2}>
           <HStack justifyContent="space-between">
             <Text bold fontSize="md" color="#989898">
@@ -56,48 +65,58 @@ const ProductScreen = ({ route }) => {
             alt="Picture of bike"
           />
         </AspectRatio>
-        <HStack justifyContent="space-around" style={styles.boxWrapper}>
-          <VStack paddingLeft={5}>
-            <Text bold fontSize="xs" color="#707070">
-              排氣量
-            </Text>
-            <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
-              {exhaust}
-            </Text>
-            <Text bold fontSize="xs" color="#707070">
-              乾燥重量
-            </Text>
-            <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
-              {dryWeight}
-            </Text>
-            <Text bold fontSize="xs" color="#707070">
-              座高
-            </Text>
-            <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
-              {seatHeight}
-            </Text>
-          </VStack>
-          <VStack paddingRight={5}>
-            <Text bold fontSize="xs" color="#707070">
-              引擎形式
-            </Text>
-            <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
-              {engine}
-            </Text>
-            <Text bold fontSize="xs" color="#707070">
-              最大馬力
-            </Text>
-            <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
-              {horsePower}
-            </Text>
-            <Text bold fontSize="xs" color="#707070">
-              車長X車高X車寬
-            </Text>
-            <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
-              {dimensions}
-            </Text>
-          </VStack>
-        </HStack>
+        <Box style={styles.boxWrapper} justifyContent="space-around" >
+          <HStack 
+            height="170"
+            width="100%"
+            borderRadius="20"
+            padding="5"
+            _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
+            _light={{ bg: "white" }}
+          >
+            <VStack paddingLeft={5}
+                  >
+              <Text bold fontSize="xs" color="#707070">
+                排氣量
+              </Text>
+              <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
+                {exhaust}
+              </Text>
+              <Text bold fontSize="xs" color="#707070">
+                乾燥重量
+              </Text>
+              <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
+                {dryWeight}
+              </Text>
+              <Text bold fontSize="xs" color="#707070">
+                座高
+              </Text>
+              <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
+                {seatHeight}
+              </Text>
+            </VStack>
+            <VStack paddingRight={5}>
+              <Text bold fontSize="xs" color="#707070">
+                引擎形式
+              </Text>
+              <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
+                {engine}
+              </Text>
+              <Text bold fontSize="xs" color="#707070">
+                最大馬力
+              </Text>
+              <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
+                {horsePower}
+              </Text>
+              <Text bold fontSize="xs" color="#707070">
+                車長X車高X車寬
+              </Text>
+              <Text bold fontSize="xs" marginLeft={6} color="#F9595F">
+                {dimensions}
+              </Text>
+            </VStack>
+          </HStack>
+        </Box>
         <VStack w="95%" marginLeft="3%">
           <HStack>
             <Text bold fontSize="xs" color="#707070">
@@ -106,18 +125,62 @@ const ProductScreen = ({ route }) => {
           </HStack>
           <HStack
             justifyContent="space-between"
-            borderBottomWidth={2}
+            borderBottomWidth={1}
+            borderBottomColor="#707070"
             paddingBottom="2"
+            marginBottom={2}
           >
             <Text bold fontSize="sm">
               基本金額
             </Text>
-            <Text bold>TWD 550</Text>
+            <HStack>
+              <Text bold>TWD</Text>
+              <Text bold color="#F9595F">550</Text>
+            </HStack>
           </HStack>
+          <VStack
+            justifyContent="space-between"
+            borderBottomWidth={1}
+            borderBottomColor="#707070"
+            paddingBottom="2"
+            marginBottom={2}
+          >
+            <Text bold fontSize="xs" color="#707070">
+              里程費用
+            </Text>
+            <Text bold>第1至50公里: TWD 10/公里</Text>
+            <Text bold>第51至150公里: TWD 8/公里</Text>
+            <Text bold>第151公里以上: TWD 6/公里</Text>
+          </VStack>
+          <VStack>
+            <Text bold fontSize="xs" color="#707070">取車地點</Text>
+            <Example />
+            <Button marginBottom={3} colorScheme="red" onPress={() => console.log("hello world") } >查看可租借日期</Button>
+          </VStack>
+            
         </VStack>
       </ScrollView>
     </Center>
   );
+};
+
+const Example = () => {
+  let [service, setService] = React.useState("");
+  return <Center>
+      <Box w="100%" maxW="400" marginBottom={3}>
+        <Select selectedValue={service} minWidth="200" fontSize="14" fontWeight="bold" accessibilityLabel="Choose Service" placeholder="請選擇取車地點" _selectedItem={{
+        bg: "#F9595F",
+        
+        endIcon: <CheckIcon size="4" />
+      }} mt={1} onValueChange={itemValue => setService(itemValue)}>
+          <Select.Item label="台北大安分店" value="台北大安" />
+          <Select.Item label="新北三重分店" value="新北三重" />
+          <Select.Item label="台中西屯分店" value="台中西屯" />
+          <Select.Item label="桃園中壢分店" value="桃園中壢" />
+          <Select.Item label="高雄前鎮分店" value="高雄前鎮" />
+        </Select>
+      </Box>
+    </Center>;
 };
 
 const styles = StyleSheet.create({
