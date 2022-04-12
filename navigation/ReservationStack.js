@@ -8,7 +8,13 @@ const Stack = createStackNavigator();
 
 const ReservationStack = () => (
     <Stack.Navigator>
-        <Stack.Screen name="ReservationScreen" component={ReservationScreen} />
+        <Stack.Screen
+            name="ReservationScreen"
+            component={ReservationScreen}
+            options={{
+                title: '我的訂單'
+            }}
+        />
     </Stack.Navigator>
 );
 
