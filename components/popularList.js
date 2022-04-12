@@ -13,9 +13,9 @@ const PopularList = ({ list, navigation }) => {
       ListHeaderComponent={
         <>
           <SearchBike />
-          <Text bold fontSize={28}>品牌</Text>
+          <Text bold fontSize={20} marginTop={2} marginLeft={5}>品牌</Text>
           <BrandList data={Products.Brands} navigation={navigation} />
-          <Text bold fontSize={28}>熱門車款</Text>
+          <Text bold fontSize={20} marginLeft={5}>熱門車款</Text>
         </>
       } 
       data={list}

@@ -5,12 +5,22 @@ const BrandScreenDetail = ({ data, navigation }) => {
     const Star = require("../assets/Star.png");
     return (
             <View style={styles.boxWrapper}>
-                <Pressable w={120} onPress={() => navigation.navigate('ProductScreen', data)}>
+                <Pressable 
+                w={150} 
+                h={170}
+                borderRadius={20}
+                paddingTop={3}
+                paddingLeft={2}
+                paddingRight={2}
+                _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
+                _light={{ bg: "white" }}
+                onPress={() => navigation.navigate('ProductScreen', data)}>
                     
                     <AspectRatio w={120} >
                         <Image
                             source={{uri: data.image}}
                             alt='picture of bike'
+                            width="130"
                             justifyContent="center"                        />
                     </AspectRatio>
                     <Text  fontSize="sm" lineHeight="xs">

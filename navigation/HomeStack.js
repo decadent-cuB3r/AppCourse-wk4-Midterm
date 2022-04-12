@@ -12,6 +12,7 @@ import IonIcons from 'react-native-vector-icons/Ionicons';
 //theme and colors
 import { useTheme } from "@react-navigation/native";
 import { useColorMode } from "native-base";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 
 //stack initial
@@ -29,14 +30,45 @@ const HomeStack = () => {
         name="HomeScreen"
         component={HomeScreen}
         options={({ navigation }) => ({
-          title: 'LeLe Ride',
+          title: '',
           headerLeft: () => (
-            <IonIcons name="menu" size={24} onPress={() => navigation.toggleDrawer()} />
+            <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+              <IonIcons
+                name="menu"
+                color={colors.text}
+                size={24}
+              />
+            </TouchableOpacity>
           ),
+          headerLeftContainerStyle: { paddingLeft: 12 },
+          headerRight: () => (
+            <IonIcons
+              name='notifications'
+              size={24}
+              color={colors.text}
+            />
+          ),
+          headerRightContainerStyle: { paddingRight: 12 }
         })}
       />
-      <Stack.Screen name="BrandScreen" component={BrandScreen} />
-      <Stack.Screen name="ProductScreen" component={ProductScreen} />
+      <Stack.Screen
+        name="BrandScreen"
+        component={BrandScreen}
+        options={{
+          headerRight: () => (
+            <IonIcons
+              name='notifications'
+              size={24}
+              color={colors.text}
+            />
+          ),
+          headerRightContainerStyle: { paddingRight: 12 }
+        }}
+      />
+      <Stack.Screen
+        name="ProductScreen"
+        component={ProductScreen}
+      />
     </Stack.Navigator>
   );
 };

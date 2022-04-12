@@ -4,6 +4,7 @@ export const lightTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
+    text: "#000000",
     // Grey / Inactived
     grey100: "#666666",
     //blackpink / activated
@@ -37,5 +38,6 @@ export const darkTheme = {
     primary700: "#F9595F",
     //secondary
     secondary700: "#707070",
+    card: "#0C1522"
   },
 };

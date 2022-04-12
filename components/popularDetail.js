@@ -5,16 +5,21 @@ const PopularDetail = ({ popularBike, navigation }) => {
     const Star = require("../assets/Star.png");
     return (
         <View style={styles.boxWrapper}>
-            <Pressable w={320} onPress={() => navigation.navigate('ProductScreen', popularBike)} >
-                <HStack  >
+            <Pressable w={350}
+            borderRadius="20"
+            _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
+            _light={{ bg: "white" }}
+             onPress={() => navigation.navigate('ProductScreen', popularBike)} >
+                <HStack  marginLeft={4}>
                     <AspectRatio w={140}>
                         <Image 
                             source={{ uri: popularBike.image }} 
                             style={styles.imageBox} 
+                            width="155"
                             alt='picture of bike'
                         />
                     </AspectRatio>
-                    <VStack justifyContent="center" marginLeft={5} w={155}>
+                    <VStack justifyContent="center" marginLeft={7} w={140}>
                         <Text fontSize="md" lineHeight="xs">{popularBike.brand}</Text>
                         <Text bold fontSize="lg">{popularBike.model}</Text>
                         <HStack justifyContent="space-between">
