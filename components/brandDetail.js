@@ -1,4 +1,4 @@
-import { Pressable, View, Image, Text } from "native-base";
+import { Pressable, View, Image } from "native-base";
 import {StyleSheet} from "react-native";
 import { useTheme } from "@react-navigation/native";
 
