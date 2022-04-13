@@ -14,7 +14,8 @@
                     "dryWeight": "139 kg",
                     "horsePower": "31.4 hp / 8,500 rpm",
                     "seatHeight": "799 mm",
-                    "dimensions": "2012 x 802 x 1052 mm"
+                    "dimensions": "2012 x 802 x 1052 mm",
+                    "basicPrice": "550"
                 },
                 {
                     "brand": "Honda",
@@ -28,7 +29,8 @@
                     "dryWeight": "103 kg",
                     "horsePower": "9.9 hp / 7,250 rpm",
                     "seatHeight": "760 mm",
-                    "dimensions": "1760 x 720 x 1015 mm"
+                    "dimensions": "1760 x 720 x 1015 mm",
+                    "basicPrice": "500"
                 },
                 {
                     "brand": "Honda",
@@ -42,7 +44,8 @@
                     "dryWeight": "208 kg",
                     "horsePower": "76.4 hp / 9,000 rpm",
                     "seatHeight": "810 mm",
-                    "dimensions": "2,130 x 750 x 1,150 mm"
+                    "dimensions": "2,130 x 750 x 1,150 mm",
+                    "basicPrice": "500"
                 }
             ],
             "raceBikes": [{
@@ -57,7 +60,8 @@
                     "dryWeight": "135 kg",
                     "horsePower": "17.1 hp / 9,000 rpm",
                     "seatHeight": "810 mm",
-                    "dimensions": "1,983 x 694 x 1,038 mm"
+                    "dimensions": "1,983 x 694 x 1,038 mm",
+                    "basicPrice": "500"
                 },
                 {
                     "brand": "Honda",
@@ -71,7 +75,8 @@
                     "dryWeight": "186 kg",
                     "horsePower": "120 ps / 13,500 rpm",
                     "seatHeight": "820 mm",
-                    "dimensions": "2,030 x 1,115 x 685 mm"
+                    "dimensions": "2,030 x 1,115 x 685 mm",
+                    "basicPrice": "600"
                 },
                 {
                     "brand": "Honda",
@@ -85,7 +90,8 @@
                     "dryWeight": "208 kg",
                     "horsePower": "75 hp / 9,000 rpm",
                     "seatHeight": "810 mm",
-                    "dimensions": "2,110 x 780 x 1,075 mm"
+                    "dimensions": "2,110 x 780 x 1,075 mm",
+                    "basicPrice": "650"
                 }
             ],
             "scooters": [{
@@ -114,7 +120,8 @@
                     "dryWeight": "186 kg",
                     "horsePower": "29hp/ 7,500 rpm",
                     "seatHeight": "780 mm",
-                    "dimensions": "2,145 x 754 x 1,505 mm"
+                    "dimensions": "2,145 x 754 x 1,505 mm",
+                    "basicPrice": "500"
                 }
             ]
         },
@@ -133,7 +140,8 @@
                 "dryWeight": "136 kg",
                 "horsePower": "19.2 PS / 10500 rpm",
                 "seatHeight": "785 mm",
-                "dimensions": "2,000 x 745 x 1,035 mm"
+                "dimensions": "2,000 x 745 x 1,035 mm",
+                "basicPrice": "500"
             }],
             "raceBikes": [{
                     "brand": "Suzuki",
@@ -147,7 +155,8 @@
                     "dryWeight": "203kg",
                     "horsePower": "188PS / 11000rpm",
                     "seatHeight": "825mm",
-                    "dimensions": "2,075 x 705 x 1,145 mm"
+                    "dimensions": "2,075 x 705 x 1,145 mm",
+                    "basicPrice": "500"
                 },
                 {
                     "brand": "Suzuki",
@@ -161,7 +170,8 @@
                     "dryWeight": "139kg",
                     "horsePower": "31.4HP/8,500rpm",
                     "seatHeight": "799mm",
-                    "dimensions": "2012 x 802 x 1052 mm"
+                    "dimensions": "2012 x 802 x 1052 mm",
+                    "basicPrice": "550"
                 }
             ],
             "scooters": [{
@@ -176,7 +186,8 @@
                 "dryWeight": "215kg",
                 "horsePower": "31.2PS / 6,300rpm",
                 "seatHeight": "750mm",
-                "dimensions": "2,235 x 765 x 1,350 mm"
+                "dimensions": "2,235 x 765 x 1,350 mm",
+                "basicPrice": "500"
             }]
         },
         {
@@ -193,7 +204,8 @@
                     "dryWeight": "168kg",
                     "horsePower": "41ps / 10,750 rpm",
                     "seatHeight": "780mm",
-                    "dimensions": "2090 x 755 x 1070 mm"
+                    "dimensions": "2090 x 755 x 1070 mm",
+                    "basicPrice": "570"
                 },
                 {
                     "brand": "Yamaha",
@@ -206,7 +218,8 @@
                     "dryWeight": "188kg",
                     "horsePower": "54.0kw(73.4 ps) / 8,500 rpm",
                     "seatHeight": "835mm",
-                    "dimensions": "2075 x 820 x 1130 mm"
+                    "dimensions": "2075 x 820 x 1130 mm",
+                    "basicPrice": "500"
                 }
             ],
             "raceBikes": [{
@@ -220,7 +233,8 @@
                 "dryWeight": "188 kg",
                 "horsePower": "73.4 PS / 8,750 rpm",
                 "seatHeight": "835 mm",
-                "dimensions": "2,070 x 705 x 1,160 mm"
+                "dimensions": "2,070 x 705 x 1,160 mm",
+                "basicPrice": "500"
             }],
             "scooters": [{
                 "brand": "Yamaha",
@@ -233,7 +247,8 @@
                 "dryWeight": "179kg",
                 "horsePower": "28ps/7,250rpm",
                 "seatHeight": "795mm",
-                "dimensions": "2185 x 775 x 1465 mm"
+                "dimensions": "2185 x 775 x 1465 mm",
+                "basicPrice": "500"
             }]
         },
         {
@@ -251,7 +266,8 @@
                     "dryWeight": "139kg",
                     "horsePower": "31.4HP/8,500rpm",
                     "seatHeight": "799mm",
-                    "dimensions": "2012 x 802 x 1052mm"
+                    "dimensions": "2012 x 802 x 1052mm",
+                    "basicPrice": "550"
                 },
                 {
                     "brand": "Kawasaki",
@@ -265,7 +281,8 @@
                     "dryWeight": "無資料",
                     "horsePower": "無資料",
                     "seatHeight": "無資料",
-                    "dimensions": "無資料"
+                    "dimensions": "無資料",
+                    "basicPrice": "500"
                 },
                 {
                     "brand": "Kawasaki",
@@ -279,7 +296,8 @@
                     "dryWeight": "無資料",
                     "horsePower": "無資料",
                     "seatHeight": "無資料",
-                    "dimensions": "無資料"
+                    "dimensions": "無資料",
+                    "basicPrice": "500"
                 }
             ],
             "raceBikes": [{
@@ -294,7 +312,8 @@
                 "dryWeight": "無資料",
                 "horsePower": "無資料",
                 "seatHeight": "無資料",
-                "dimensions": "無資料"
+                "dimensions": "無資料",
+                "basicPrice": "500"
             }],
             "scooters": [{
                     "brand": "Kawasaki",
@@ -308,7 +327,8 @@
                     "dryWeight": "無資料",
                     "horsePower": "無資料",
                     "seatHeight": "無資料",
-                    "dimensions": "無資料"
+                    "dimensions": "無資料",
+                    "basicPrice": "500"
                 },
                 {
                     "brand": "Kawasaki",
@@ -322,7 +342,8 @@
                     "dryWeight": "無資料",
                     "horsePower": "無資料",
                     "seatHeight": "無資料",
-                    "dimensions": "無資料"
+                    "dimensions": "無資料",
+                    "basicPrice": "500"
                 }
             ]
         }

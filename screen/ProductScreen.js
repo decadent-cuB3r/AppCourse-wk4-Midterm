@@ -28,6 +28,7 @@ const ProductScreen = ({ route }) => {
     horsePower,
     seatHeight,
     dimensions,
+    basicPrice
   } = route.params;
   const Star = require("../assets/Star.png");
   return (
@@ -135,7 +136,7 @@ const ProductScreen = ({ route }) => {
             </Text>
             <HStack>
               <Text bold>TWD</Text>
-              <Text bold color="#F9595F">550</Text>
+              <Text bold color="#F9595F">{basicPrice}</Text>
             </HStack>
           </HStack>
           <VStack
