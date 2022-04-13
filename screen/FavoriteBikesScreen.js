@@ -2,13 +2,13 @@ import { Text, StyleSheet, FlatList } from "react-native";
 import { useSelector } from "react-redux";
 import PopularDetail from "../components/popularDetail";
 
-const FavoriteBikeScreen = () => {
+const FavoriteBikeScreen = ({navigation}) => {
     const renderItem = ({ item }) => <PopularDetail popularBike={item} navigation={navigation} />;
-    const { bike } = useSelector((state) => state.favBike);
+    const bikes = useSelector((state) => state.favBike.bikes);
 
     return (
         <FlatList
-            data={bike}
+            data={bikes}
             renderItem={renderItem}
             keyExtractor={item => item.ID}
         />

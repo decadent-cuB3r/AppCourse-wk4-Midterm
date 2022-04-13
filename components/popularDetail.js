@@ -1,5 +1,6 @@
 import { AspectRatio, Image, Text, Pressable, View, HStack, VStack } from 'native-base';
 import { StyleSheet } from "react-native";
+import { useState } from 'react';
 
 //import Icons
 import IonIcons from 'react-native-vector-icons/Ionicons';
@@ -8,16 +9,38 @@ import IonIcons from 'react-native-vector-icons/Ionicons';
 import { useDispatch } from 'react-redux';
 import { Store } from '../redux/store';
 //import add favorite action
-import { addFavoriteBike } from '../redux/actions';
+import { addFavoriteBike, removeFavoriteBike } from '../redux/actions';
 
 const PopularDetail = ({ popularBike, navigation }) => {
-    
+    // destructure popularBike
+    const {
+        brand,
+        ID,
+        model,
+        image,
+        grade,
+        rating,
+        exhaust,
+        engine,
+        dryWeight,
+        horsePower,
+        seatHeight,
+        dimensions
+    } = popularBike;
+    //initiallize actions dispatch
     const dispatch = useDispatch();
 
-    const addToFav = () => {    
-        alert('add to favorite!');
+    const [isFav, setIsFav] = useState(false);
+    const toggleFav = () => {
+        if (isFav == false) {
+            setIsFav(true)
+            dispatch(addFavoriteBike({ brand, ID, model, image, grade, rating, exhaust, engine, dryWeight, horsePower, seatHeight, dimensions }));
+        }
+        else {
+            setIsFav(false)
+            dispatch(removeFavoriteBike(ID));
+        }
         console.log(Store.getState());
-        dispatch(addFavoriteBike(popularBike));
     };
 
 
@@ -32,7 +55,7 @@ const PopularDetail = ({ popularBike, navigation }) => {
                 <HStack marginLeft={4}>
                     <AspectRatio w={140}>
                         <Image
-                            source={{ uri: popularBike.image }}
+                            source={{ uri: image }}
                             style={styles.imageBox}
                             width="155"
                             alt='picture of bike'
@@ -40,14 +63,18 @@ const PopularDetail = ({ popularBike, navigation }) => {
                     </AspectRatio>
                     <VStack justifyContent="center" marginLeft={7} w={140}>
                         <HStack justifyContent="space-between" >
-                            <Text fontSize="md" lineHeight="xs" color="#989898">{popularBike.brand}</Text>
-                            <Pressable  onPress={addToFav}>
-                                <IonIcons name='heart-outline' size={20} />
+                            <Text fontSize="md" lineHeight="xs" color="#989898">{brand}</Text>
+                            <Pressable onPress={toggleFav}>
+                                {
+                                    isFav == false ?
+                                        <IonIcons name='heart-outline' size={20} />
+                                        : <IonIcons name='heart' size={20} />
+                                }
                             </Pressable>
                         </HStack>
-                        <Text bold fontSize="lg">{popularBike.model}</Text>
+                        <Text bold fontSize="lg">{model}</Text>
                         <HStack justifyContent="space-between">
-                            <Text bold fontSize="sm" lineHeight="xs">{popularBike.grade}</Text>
+                            <Text bold fontSize="sm" lineHeight="xs">{grade}</Text>
                             <HStack>
                                 <Image
                                     source={Star}
@@ -55,7 +82,7 @@ const PopularDetail = ({ popularBike, navigation }) => {
                                     marginTop={0}
                                 />
                                 <Text lineHeight="xs" bold fontSize="xs">
-                                    {popularBike.rating}
+                                    {rating}
                                 </Text>
                             </HStack>
                         </HStack>
