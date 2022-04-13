@@ -10,6 +10,7 @@ const PopularList = ({ list, navigation }) => {
   const renderItem = ({ item }) => <PopularDetail popularBike={item} navigation={navigation} />;
   return (
     <FlatList
+      showsVerticalScrollIndicator={false}
       ListHeaderComponent={
         <>
           <SearchBike />
