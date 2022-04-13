@@ -1,23 +1,11 @@
 import {
   ADD_FAVORITE_BIKE,
-  TOGGLE_COLOR_MODE
+  TOGGLE_COLOR_MODE,
+  REMOVE_FAVORITE_BIKE,
 } from '../utils/constants';
 
 const initialFavoriteBike = {
-  bikes: [{
-    brand: "",
-    ID: "",
-    model: "",
-    image: "",
-    grade: "",
-    rating: "",
-    exhaust: "",
-    engine: "",
-    dryWeight: "",
-    horsePower: "",
-    seatHeight: "",
-    dimensions: ""
-  }],
+  bikes: [],
 };
 const initialColorMode = { colorMode: "light" };
 
@@ -43,10 +31,18 @@ export const addFavReducer = (state = initialFavoriteBike, action) => {
     case ADD_FAVORITE_BIKE:
       return {
         ...state, //copying original state
-        bikes: [ ...state, action.paylaod]
+        bikes: [ ...state.bikes, action.payload ]
       };
+    
+    case REMOVE_FAVORITE_BIKE:
+      return {
+        ...state,
+        bikes: state.bikes.filter(bike => bike.ID !== action.payload)
+      }
 
     default:
       return state;
   }
 }
+
+
