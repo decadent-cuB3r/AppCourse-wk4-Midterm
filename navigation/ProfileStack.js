@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 
 const ProfileStack = () => (
     <Stack.Navigator>
-        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="會員專區" component={ProfileScreen} />
     </Stack.Navigator>
 );
 
