@@ -1,10 +1,17 @@
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, FlatList } from "react-native";
+import { useSelector } from "react-redux";
+import PopularDetail from "../components/popularDetail";
 
 const FavoriteBikeScreen = () => {
+    const renderItem = ({ item }) => <PopularDetail popularBike={item} navigation={navigation} />;
+    const { bike } = useSelector((state) => state.favBike);
+
     return (
-        <View style={styles.container}>
-            <Text>Favorite Bike Screen</Text>
-        </View>
+        <FlatList
+            data={bike}
+            renderItem={renderItem}
+            keyExtractor={item => item.ID}
+        />
     );
 };
 
@@ -12,8 +19,8 @@ export default FavoriteBikeScreen;
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
-  });
+});

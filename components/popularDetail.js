@@ -1,34 +1,58 @@
-import { Box, AspectRatio, Image, Text, Pressable, View, HStack, VStack } from 'native-base';
-import {StyleSheet} from "react-native";
+import { AspectRatio, Image, Text, Pressable, View, HStack, VStack } from 'native-base';
+import { StyleSheet } from "react-native";
+
+//import Icons
+import IonIcons from 'react-native-vector-icons/Ionicons';
+
+//react-redux 
+import { useDispatch } from 'react-redux';
+import { Store } from '../redux/store';
+//import add favorite action
+import { addFavoriteBike } from '../redux/actions';
 
 const PopularDetail = ({ popularBike, navigation }) => {
+    
+    const dispatch = useDispatch();
+
+    const addToFav = () => {    
+        alert('add to favorite!');
+        console.log(Store.getState());
+        dispatch(addFavoriteBike(popularBike));
+    };
+
+
     const Star = require("../assets/Star.png");
     return (
         <View style={styles.boxWrapper}>
             <Pressable w={350}
-            borderRadius="20"
-            _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
-            _light={{ bg: "white" }}
-             onPress={() => navigation.navigate('ProductScreen', popularBike)} >
-                <HStack  marginLeft={4}>
+                borderRadius="20"
+                _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
+                _light={{ bg: "white" }}
+                onPress={() => navigation.navigate('ProductScreen', popularBike)} >
+                <HStack marginLeft={4}>
                     <AspectRatio w={140}>
-                        <Image 
-                            source={{ uri: popularBike.image }} 
-                            style={styles.imageBox} 
+                        <Image
+                            source={{ uri: popularBike.image }}
+                            style={styles.imageBox}
                             width="155"
                             alt='picture of bike'
                         />
                     </AspectRatio>
                     <VStack justifyContent="center" marginLeft={7} w={140}>
-                        <Text fontSize="md" lineHeight="xs" color="#989898">{popularBike.brand}</Text>
+                        <HStack justifyContent="space-between" >
+                            <Text fontSize="md" lineHeight="xs" color="#989898">{popularBike.brand}</Text>
+                            <Pressable  onPress={addToFav}>
+                                <IonIcons name='heart-outline' size={20} />
+                            </Pressable>
+                        </HStack>
                         <Text bold fontSize="lg">{popularBike.model}</Text>
                         <HStack justifyContent="space-between">
-                             <Text bold fontSize="sm" lineHeight="xs">{popularBike.grade}</Text>
-                             <HStack>
+                            <Text bold fontSize="sm" lineHeight="xs">{popularBike.grade}</Text>
+                            <HStack>
                                 <Image
-                                        source={Star}
-                                        alt='star'
-                                        marginTop={0}
+                                    source={Star}
+                                    alt='star'
+                                    marginTop={0}
                                 />
                                 <Text lineHeight="xs" bold fontSize="xs">
                                     {popularBike.rating}
@@ -37,8 +61,8 @@ const PopularDetail = ({ popularBike, navigation }) => {
                         </HStack>
                     </VStack>
                 </HStack>
-            </Pressable>
-        </View>
+            </Pressable >
+        </View >
     );
 };
 

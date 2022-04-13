@@ -1,30 +1,26 @@
-import { Provider } from "react-redux";
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { useDispatch, useSelector } from 'react-redux';
 import thunk from 'redux-thunk';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { persistStore, persistReducer } from 'redux-persist';
 
-import addFavoriteBike from  "./actions";
-import ADD_FAVORITE_BIKE from "../utils/constants";
+import {
+    colorModeReducer,
+    addFavReducer,
+} from './reducers';
 
-const initialFavoriteBike = { favoriteBike: null };
+const persistConfig = {
+    key: 'root',
+    storage: AsyncStorage,
+};
 
-const favoriteBikeReducer = ( state = initialFavoriteBike, action) => {
-    switch(action.type){
-
-        case ADD_FAVORITE_BIKE:
-            return { favoriteBike: action.payload};
-        default:
-            return state;
-    }
-}
 
 const reducer = combineReducers({
-    favoriteBike: favoriteBikeReducer,
+    favBike: addFavReducer,
 });
 
-const store = createStore(
+export const Store = createStore(
     reducer,
     applyMiddleware(thunk),
 );
 
-export default store;
+export const persistor = persistStore(Store);
