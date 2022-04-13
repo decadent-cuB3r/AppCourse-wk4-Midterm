@@ -1,26 +1,26 @@
 import React from "react";
 import MapView from 'react-native-maps';
 import { Box, Text, Center, View } from "native-base";
+import { StyleSheet } from "react-native";
 
+  
 export default function LocationScreen () {
-    const defaultProps = {
-        center: {
-            lat: 10.99835602,
-            lng: 77.01502627
-        },
-        zoom: 11
-    };
-
+    const onRegionChange=(region)=> {
+        this.setState({ region });
+      }
     return (
-        // Important! Always set the container height explicitly
-        <View style={{ height: '100vh', width: '100%' }}>
-            <GoogleMapReact
-                bootstrapURLKeys={{ key: "" }}
-                defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-            >
-                <Box></Box>
-            </GoogleMapReact>
+        // Important! Always set the container height explic
+        <View >
+            <MapView
+                initialRegion={{
+                latitude: 37.78825,
+                longitude: -122.4324,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421,
+                }}
+                onRegionChange={onRegionChange}
+            />
+            
         </View>
     );
 };
