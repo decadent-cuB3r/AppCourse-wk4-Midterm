@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 
 const FavoriteStack = () => (
     <Stack.Navigator>
-        <Stack.Screen name="FavortieBikeScreen" component={FavoriteBikeScreen} />
+        <Stack.Screen name="我的收藏" component={FavoriteBikeScreen} />
     </Stack.Navigator>
 );
 

@@ -35,16 +35,46 @@
                 {
                     "brand": "Honda",
                     "ID": "HN3",
-                    "model": "CB650F",
-                    "image": "https://i.imgur.com/OCu1uTc.png",
+                    "model": "CB150R",
+                    "image": "https://i.imgur.com/FzaeqPN.png",
                     "grade": "M級車",
                     "rating": 4.0,
                     "exhaust": 125,
-                    "engine": "水冷並列4汽缸",
+                    "engine": "水冷並列單汽缸",
                     "dryWeight": "208 kg",
                     "horsePower": "76.4 hp / 9,000 rpm",
                     "seatHeight": "810 mm",
                     "dimensions": "2,130 x 750 x 1,150 mm",
+                    "basicPrice": "500"
+                },
+                {
+                    "brand": "Honda",
+                    "ID": "HN3",
+                    "model": "CB1000R",
+                    "image": "https://i.imgur.com/FzaeqPN.png",
+                    "grade": "A級車",
+                    "rating": 3.8,
+                    "exhaust": 998,
+                    "engine": "水冷並列4汽缸",
+                    "dryWeight": "212 kg",
+                    "horsePower": "143.4 hp / 10,500 rpm",
+                    "seatHeight": "830 mm",
+                    "dimensions": "2,120 x 789 x 1,095 mm",
+                    "basicPrice": "650"
+                },
+                {
+                    "brand": "Honda",
+                    "ID": "HN3",
+                    "model": "CB1100",
+                    "image": "https://i.imgur.com/FzaeqPN.png",
+                    "grade": "C級車",
+                    "rating": 4.2,
+                    "exhaust": 1140,
+                    "engine": "水冷並列4汽缸",
+                    "dryWeight": "243 kg",
+                    "horsePower": "88 hp / 7,500 rpm",
+                    "seatHeight": "765 mm",
+                    "dimensions": "2,205 x 1130 x 1,490 mm",
                     "basicPrice": "500"
                 }
             ],
@@ -92,6 +122,36 @@
                     "seatHeight": "810 mm",
                     "dimensions": "2,110 x 780 x 1,075 mm",
                     "basicPrice": "650"
+                },
+                {
+                    "brand": "Honda",
+                    "ID": "HR3",
+                    "model": "CBR500R",
+                    "image": "https://i.imgur.com/OCu1uTc.png",
+                    "grade": "C+級車",
+                    "rating": 3.5,
+                    "exhaust": 500,
+                    "engine": "水冷四行程雙缸",
+                    "dryWeight": "193 kg",
+                    "horsePower": "49.6 hp / 8,500 rpm",
+                    "seatHeight": "785 mm",
+                    "dimensions": "2,080 x 755 x 1,145 mm",
+                    "basicPrice": "550"
+                },
+                {
+                    "brand": "Honda",
+                    "ID": "HN3",
+                    "model": "CBR250RR",
+                    "image": "https://i.imgur.com/FzaeqPN.png",
+                    "grade": "B級車",
+                    "rating": 4.1,
+                    "exhaust": 249,
+                    "engine": "水冷並列雙汽缸",
+                    "dryWeight": "165 kg",
+                    "horsePower": "36.8 hp / 12,500 rpm",
+                    "seatHeight": "790 mm",
+                    "dimensions": "2,060 x 724 x 1,145 mm",
+                    "basicPrice": "570"
                 }
             ],
             "scooters": [{
@@ -106,7 +166,8 @@
                     "dryWeight": "235 kg",
                     "horsePower": "57.8hp / 6,750 rpm",
                     "seatHeight": "790mm",
-                    "dimensions": "2,200 x 790 x 1,485 mm"
+                    "dimensions": "2,200 x 790 x 1,485 mm",
+                    "basicPrice": "500"
                 },
                 {
                     "brand": "Honda",
