@@ -8,9 +8,11 @@ import HomeStack from './HomeStack';
 import ProfileStack from './ProfileStack';
 import ReservationStack from './ReservationStack';
 import FavoriteStack from './FavoriteStack';
+import LocationStack from './LocationStack';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import Icon2 from 'react-native-vector-icons/Ionicons';
+ 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -49,6 +51,15 @@ const TabNavigator = () => {
                     headerShown: false,
                     title: "我的訂單",
                     tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon name='book-open' color={color} size={32} /></View>
+                }}
+            />
+            <Tab.Screen
+                name='LocationStack'
+                component={LocationStack}
+                options={{
+                    headerShown: false,
+                    title: "分店地圖",
+                    tabBarIcon: ({color}) => <View style={{marginTop:8}}><Icon2 name='location-sharp' color={color} size={32} /></View>
                 }}
             />
             <Tab.Screen

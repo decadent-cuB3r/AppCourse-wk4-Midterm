@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Box, Center, Switch, HStack, Text, useColorMode } from 'native-base';
 import { useTheme } from '@react-navigation/native';
 
 const SettingScreen = () => {
    const { colors } = useTheme();
    const { colorMode, toggleColorMode } = useColorMode();
+   const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
    
 
    return (
@@ -18,18 +20,15 @@ const SettingScreen = () => {
             mt="2" px="2" py="4"
             _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
             _light={{ bg: "white" }}
-            borderRadius="md"
             alignSelf="center"
          >
-            <HStack space={8} alignItems="center" >
-               <Text fontSize="lg">{colorMode == "light" ? "Light Mode" : "Dark Mode"}</Text>
+            <HStack w="90%" justifyContent="space-between"  >
+               <Text fontSize="lg">通知設定</Text>
                <Switch
-                  name="light Mode"
-                  isChecked={colorMode === "light"}
-                  onToggle={toggleColorMode}
-                  trackColor={{true: "#F9595F",false:"#989898"}}
-                  accessibilityLabel="display-mode"
-                  accessibilityHint="light or dark mode"
+                  value={isEnabled}
+                  name="alert"
+                  trackColor={{ false: "#767577", true: "#f9595f" }}
+                  onToggle={toggleSwitch}
                />
             </HStack>
          </Center>

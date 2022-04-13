@@ -15,7 +15,7 @@ import SwitchSelector from 'react-native-switch-selector';
 
 //import theme
 import { lightTheme, darkTheme } from '../myTheme/myTheme';
-import { Box, Text, useColorMode, VStack, Input } from 'native-base';
+import { Box, Text, useColorMode, VStack, Input, HStack } from 'native-base';
 import { Switch } from 'react-native-switch';
 
 const Drawer = createDrawerNavigator();
@@ -35,16 +35,16 @@ const CustomDrawerContent = (props) => {
           <Text bold fontSize={24} color="#ffffff">Peggy Lin</Text>
         </VStack>
         <DrawerItemList {...props} />
+            <VStack w="70%" margin="14%" marginTop="300">
                <SwitchSelector options={options}
                     initial={0} 
                     onPress={toggleColorMode}
                     buttonColor="#F9595F"
-                    backgroundColor="#DADADA"
+                    backgroundColor="#989898"
                     borderColor='#F9595F'
-
+                    textColor="#ffffff"
                 />
-        
-  
+            </VStack>
       </DrawerContentScrollView>
     );
   }
