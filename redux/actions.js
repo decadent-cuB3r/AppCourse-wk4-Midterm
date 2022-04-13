@@ -1,21 +1,26 @@
-import ADD_FAVORITE_BIKE from '../utils/constants';
-import TOGGLE_COLOR_MODE from '../utils/constants';
+import {
+    ADD_FAVORITE_BIKE,
+    TOGGLE_COLOR_MODE,
+    REMOVE_FAVORITE_BIKE
+} from '../utils/constants'
 
-const addFavoriteBike = (addFavoriteBike) => (dispatch) => {
+export const addFavoriteBike = (bikeInfo) => (dispatch) => {
     dispatch({
         type: ADD_FAVORITE_BIKE,
-        payload: addFavoriteBike,
+        payload: bikeInfo,
     });
 };
 
-const toggleColorMode = () => (dispatch) => {
+export const removeFavoriteBike = (bikeID) => (dispatch) => {
+    dispatch({
+        type: REMOVE_FAVORITE_BIKE,
+        payload: bikeID
+    })
+}
+
+
+export const toggleColorMode = () => (dispatch) => {
     dispatch({
         type: TOGGLE_COLOR_MODE,
     });
 };
-
-export default
-    {
-        addFavoriteBike,
-        toggleColorMode
-    };
