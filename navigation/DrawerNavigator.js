@@ -6,22 +6,27 @@ import { createDrawerNavigator,DrawerContentScrollView,
 //import Drawer components
 import TabNavigator from './TabNaviagator';
 import SettingStack from './SettingsStack';
+import {useState} from "react-native"
 
 //import Icons
 import Ionicons from "react-native-vector-icons/Ionicons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
+import SwitchSelector from 'react-native-switch-selector';
 
 //import theme
 import { lightTheme, darkTheme } from '../myTheme/myTheme';
-import { Box, Text, useColorMode, Divider, VStack, Input } from 'native-base';
-
+import { Box, Text, useColorMode, VStack, Input } from 'native-base';
+import { Switch } from 'react-native-switch';
 
 const Drawer = createDrawerNavigator();
-
+const options = [
+    { label: 'light', value: '1' },
+    { label: 'dark', value: '1.5' }
+];
 const CustomDrawerContent = (props) => {
     const { colors } = useTheme();
-  
+    const { colorMode, toggleColorMode } = useColorMode();
+
     return (
       <DrawerContentScrollView {...props}
       >
@@ -30,7 +35,14 @@ const CustomDrawerContent = (props) => {
           <Text bold fontSize={24} color="#ffffff">Peggy Lin</Text>
         </VStack>
         <DrawerItemList {...props} />
+               <SwitchSelector options={options}
+                    initial={0} 
+                    onPress={toggleColorMode}
+                    buttonColor="#F9595F"
+                    backgroundColor="#DADADA"
+                    borderColor='#F9595F'
 
+                />
         
   
       </DrawerContentScrollView>
