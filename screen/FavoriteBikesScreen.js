@@ -1,10 +1,14 @@
-import { Text, StyleSheet, FlatList } from "react-native";
-import { useSelector } from "react-redux";
-import PopularDetail from "../components/popularDetail";
+import { Text, StyleSheet, FlatList, View, HStack, VStack, Pressable, AspectRatio, Image } from "react-native";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
 
-const FavoriteBikeScreen = ({navigation}) => {
-    const renderItem = ({ item }) => <PopularDetail popularBike={item} navigation={navigation} />;
+import FavoriteBikeDetail from "../components/favoriteBikeDetail";
+
+
+const FavoriteBikeScreen = ({ navigation }) => {
     const bikes = useSelector((state) => state.favBike.bikes);
+    const renderItem = ({ item }) => <FavoriteBikeDetail popularBike={item} navigation={navigation} />;
+
 
     return (
         <FlatList
@@ -16,11 +20,3 @@ const FavoriteBikeScreen = ({navigation}) => {
 };
 
 export default FavoriteBikeScreen;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
