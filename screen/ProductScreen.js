@@ -9,13 +9,14 @@ import {
   Button,
   Select,
   FormControl,
-  CheckIcon, 
+  CheckIcon,
   Box
 } from "native-base";
 import { StyleSheet } from "react-native";
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 
-const ProductScreen = ({ route }) => {
+const ProductScreen = ({ route, navigation }) => {
   const {
     brand,
     model,
@@ -31,11 +32,39 @@ const ProductScreen = ({ route }) => {
     basicPrice
   } = route.params;
   const Star = require("../assets/Star.png");
+  let [service, setService] = React.useState("");
+
+  const SelectShop = () => {
+    return <Center>
+      <Box w="100%" maxW="400" marginBottom={3}>
+        <Select selectedValue={service} minWidth="200" fontSize="14" fontWeight="bold" accessibilityLabel="Choose Service" placeholder="請選擇取車地點" _selectedItem={{
+          bg: "#F9595F",
+
+          endIcon: <CheckIcon size="4" />
+        }} mt={1} onValueChange={itemValue => setService(itemValue)}>
+          <Select.Item label="台北大安分店" value="台北大安" />
+          <Select.Item label="新北三重分店" value="新北三重" />
+          <Select.Item label="台中西屯分店" value="台中西屯" />
+          <Select.Item label="桃園中壢分店" value="桃園中壢" />
+          <Select.Item label="高雄前鎮分店" value="高雄前鎮" />
+        </Select>
+      </Box>
+    </Center>;
+  };
+
+  const CheckAndGo = () => {
+    if (service == ""){
+      alert("請選擇店家");
+    } else {
+      navigation.navigate('ChooseDateScreen');
+    }
+};
+
   return (
     <Center>
-      <ScrollView 
-      width="90%"
-      showsVerticalScrollIndicator={false}
+      <ScrollView
+        width="90%"
+        showsVerticalScrollIndicator={false}
       >
         <VStack marginTop={2}>
           <HStack justifyContent="space-between">
@@ -67,7 +96,7 @@ const ProductScreen = ({ route }) => {
           />
         </AspectRatio>
         <Box style={styles.boxWrapper} justifyContent="space-around" >
-          <HStack 
+          <HStack
             height="170"
             width="100%"
             borderRadius="20"
@@ -76,7 +105,7 @@ const ProductScreen = ({ route }) => {
             _light={{ bg: "white" }}
           >
             <VStack paddingLeft={5}
-                  >
+            >
               <Text bold fontSize="xs" color="#707070">
                 排氣量
               </Text>
@@ -155,34 +184,22 @@ const ProductScreen = ({ route }) => {
           </VStack>
           <VStack>
             <Text bold fontSize="xs" color="#707070">取車地點</Text>
-            <Example />
-            <Button marginBottom={3} colorScheme="red" onPress={() => console.log("hello world") } >查看可租借日期</Button>
+            <SelectShop />
+            <Button
+              marginBottom={3}
+              colorScheme="red"
+              onPress={CheckAndGo} >
+              查看可租借日期
+            </Button>
           </VStack>
-            
+
         </VStack>
       </ScrollView>
     </Center>
   );
 };
 
-const Example = () => {
-  let [service, setService] = React.useState("");
-  return <Center>
-      <Box w="100%" maxW="400" marginBottom={3}>
-        <Select selectedValue={service} minWidth="200" fontSize="14" fontWeight="bold" accessibilityLabel="Choose Service" placeholder="請選擇取車地點" _selectedItem={{
-        bg: "#F9595F",
-        
-        endIcon: <CheckIcon size="4" />
-      }} mt={1} onValueChange={itemValue => setService(itemValue)}>
-          <Select.Item label="台北大安分店" value="台北大安" />
-          <Select.Item label="新北三重分店" value="新北三重" />
-          <Select.Item label="台中西屯分店" value="台中西屯" />
-          <Select.Item label="桃園中壢分店" value="桃園中壢" />
-          <Select.Item label="高雄前鎮分店" value="高雄前鎮" />
-        </Select>
-      </Box>
-    </Center>;
-};
+
 
 const styles = StyleSheet.create({
   boxWrapper: {

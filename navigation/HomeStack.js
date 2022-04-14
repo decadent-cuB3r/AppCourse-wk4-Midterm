@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from '../screen/HomeScreen';
 import BrandScreen from '../screen/BrandScreen';
 import ProductScreen from '../screen/ProductScreen';
+import ChooseDateScreen from "../screen/ChooseDateScreen";
 
 //import community icon
 import IonIcons from 'react-native-vector-icons/Ionicons';
@@ -55,17 +56,24 @@ const HomeStack = () => {
         name="BrandScreen"
         component={BrandScreen}
         options={{
-          title:"",
+          title: "",
 
           headerRightContainerStyle: { paddingRight: 12 }
         }}
       />
       <Stack.Screen
-      options={{
-        title:""
-      }}
+        options={{
+          title: ""
+        }}
         name="ProductScreen"
         component={ProductScreen}
+      />
+      <Stack.Screen
+        name="ChooseDateScreen"
+        component={ChooseDateScreen}
+        options={{
+          title: ""
+        }}
       />
     </Stack.Navigator>
   );

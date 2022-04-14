@@ -67,8 +67,8 @@ const PopularDetail = ({ popularBike, navigation }) => {
                             <Pressable onPress={toggleFav}>
                                 {
                                     isFav == false ?
-                                        <IonIcons name='heart-outline' size={20} />
-                                        : <IonIcons name='heart' size={20} />
+                                        <IonIcons name='heart-outline' size={22} />
+                                        : <IonIcons name='heart' size={22} color="#f9595f"/>
                                 }
                             </Pressable>
                         </HStack>
