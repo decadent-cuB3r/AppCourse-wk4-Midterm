@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Box, Center, Switch, HStack, Text, useColorMode } from 'native-base';
 import { useTheme } from '@react-navigation/native';
 
@@ -6,8 +6,8 @@ const SettingScreen = () => {
    const { colors } = useTheme();
    const { colorMode, toggleColorMode } = useColorMode();
    const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-   
+   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
 
    return (
       <Box

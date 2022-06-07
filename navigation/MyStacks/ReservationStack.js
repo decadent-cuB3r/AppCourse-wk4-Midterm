@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 //Reservation Stack Components
-import ReservationScreen from '../screen/ResvervationScreen';
+import ReservationScreen from '../../screen/ResvervationScreen';
 
 const Stack = createStackNavigator();
 
