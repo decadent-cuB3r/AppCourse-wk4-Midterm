@@ -6,6 +6,7 @@ import HomeScreen from '../../screen/HomeScreen';
 import BrandScreen from '../../screen/BrandScreen';
 import ProductScreen from '../../screen/ProductScreen';
 import ChooseDateScreen from "../../screen/ChooseDateScreen";
+import PaymentScreen from "../../screen/PaymentScreen"
 
 //import community icon
 import IonIcons from 'react-native-vector-icons/Ionicons';
@@ -72,7 +73,14 @@ const HomeStack = () => {
         name="ChooseDateScreen"
         component={ChooseDateScreen}
         options={{
-          title: ""
+          title: "訂單確認"
+        }}
+      />
+      <Stack.Screen
+        name="PaymentScreen"
+        component={PaymentScreen}
+        options={{
+          title: "付款方式選擇"
         }}
       />
     </Stack.Navigator>

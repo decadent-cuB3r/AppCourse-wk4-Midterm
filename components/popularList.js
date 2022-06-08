@@ -18,7 +18,7 @@ const PopularList = ({ list, navigation }) => {
           <BrandList data={Products.Brands} navigation={navigation} />
           <HStack justifyContent="space-between" marginRight="5%" marginTop={2} marginBottom={2}>
             <Text bold fontSize={20} marginLeft={5} >熱門車款</Text>
-            <Button size="sm" marginTop="1.5" paddingTop="0" paddingBottom="0" borderRadius={10} h={6} colorScheme="red">查看更多</Button>
+            <Button size="sm" marginTop="1.5" paddingTop="0" paddingBottom="0" borderRadius={10} h={6} backgroundColor='#F9595F'>查看更多</Button>
           </HStack>
         </VStack>
       }

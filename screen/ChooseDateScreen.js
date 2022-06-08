@@ -13,12 +13,14 @@ import {
     Box,
 
 } from "native-base";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import React, { useState } from 'react'
 import DatePicker from 'react-native-datepicker';
 import CheckBox from "expo-checkbox";
 
-const ChooseDateScreen = ({ route, navigation, service }) => {
+
+
+const ChooseDateScreen = ({ route, navigation,service }) => {
     const {
         brand,
         model,
@@ -27,15 +29,24 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
         rating,
         basicPrice
     } = route.params;
-    const place = service; 
     const Star = require("../assets/Star.png");
-
+    
 
     const [date, setDate] = useState('10-06-2022');
     const [date2, setDate2] = useState('10-06-2022');
     const [agree, setAgree] = useState(false);
     const [agree2, setAgree2] = useState(false);
+    const [btn, setbtn] = useState(false);
 
+
+    const CheckAndPay = () => {
+        if (agree==false||agree2==false) {
+          alert("請閱讀並勾選同意相關規定");
+    
+        } else {
+          navigation.navigate('PaymentScreen', route.params, date ,date2);
+        }
+      };
     return (
         <Center>
             <ScrollView
@@ -102,6 +113,9 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                                     dateInput: {
                                         marginLeft: 36,
                                     },
+                                    dateText: {
+                                        color: "#F9595F"
+                                    },
                                 }}
                                 onDateChange={(date) => {
                                     setDate(date);
@@ -132,6 +146,9 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                                     },
                                     dateInput: {
                                         marginLeft: 36,
+                                    },
+                                    dateText: {
+                                        color: "#F9595F"
                                     },
                                 }}
                                 onDateChange={(date2) => {
@@ -166,8 +183,14 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                             安心方案
                         </Text>
                         <HStack>
-                            <Text bold>TWD</Text>
+                            <Text bold>+TWD</Text>
                             <Text bold color="#F9595F">300</Text>
+                            <TouchableOpacity onPress={() => setbtn(!btn)}>
+                                {
+                                    btn ? <Text style={styles.btn}>加購</Text> :
+                                        <Text style={styles.btn2}>已加購</Text>
+                                }
+                            </TouchableOpacity>
                         </HStack>
                     </HStack>
                     <HStack
@@ -178,7 +201,10 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                         </Text>
                         <HStack>
                             <Text bold>TWD</Text>
-                            <Text bold color="#F9595F">{basicPrice}</Text>
+                            <Text bold color="#F9595F">{
+                                btn ? basicPrice:
+                                    parseInt(basicPrice) + 300 
+                            }</Text>
                         </HStack>
                     </HStack>
                     <VStack
@@ -205,7 +231,7 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                         <Text bold fontSize="xs" color="#707070">
                             取車地點
                         </Text>
-                        <Text bold>{place}</Text>
+                        <Text bold>台北大安分店{service}</Text>
                     </VStack>
                     <HStack>
                         <CheckBox
@@ -215,9 +241,9 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                             marginBottom={10}
                         />
                         <Text style={styles.agreetext}>
-                        我已閱讀並同意<Text style={styles.redtext} bold>租賃相關規定</Text>
+                            我已閱讀並同意<Text style={styles.redtext} bold>租賃相關規定</Text>
                         </Text>
-                        
+
                     </HStack>
                     <HStack>
                         <CheckBox
@@ -227,15 +253,15 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                             marginBottom={10}
                         />
                         <Text style={styles.agreetext}>
-                        未滿20歲者租車需<Text style={styles.redtext} bold>監護人同意書</Text>
+                            未滿20歲者租車需<Text style={styles.redtext} bold>監護人同意書</Text>
                         </Text>
-                        
+
                     </HStack>
                     <VStack>
                         <Button
                             marginBottom={3}
-                            colorScheme="red"
-                            onPress={""} >
+                            backgroundColor='#F9595F'
+                            onPress={CheckAndPay} >
                             前往付款
                         </Button>
                     </VStack>
@@ -264,12 +290,33 @@ const styles = StyleSheet.create({
         },
     },
     agreetext: {
-        marginLeft: 5 ,
+        marginLeft: 5,
         fontSize: 14
     },
     redtext: {
         color: "#F9595F"
-        
+
+    },
+    datePickerStyle: {
+        color: "#F9595F",
+    },
+    btn: {
+        color: "#8E8E8E",
+        borderWidth: 1,
+        fontSize: 12,
+        paddingRight: 2,
+        paddingLeft: 2,
+        marginLeft: 5,
+        borderColor: "#8E8E8E"
+    },
+    btn2: {
+        color: "#F9595F",
+        borderWidth: 1,
+        fontSize: 12,
+        paddingRight: 2,
+        paddingLeft: 2,
+        marginLeft: 5,
+        borderColor: "#F9595F"
     }
 });
 

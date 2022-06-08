@@ -34,6 +34,8 @@
     "react-native-daterange-picker": "^1.5.1",
     "react-native-gesture-handler": "~2.1.0",
     "react-native-maps": "0.29.4",
+    "react-native-micro-animated-button": "^0.0.28",
+    "react-native-radio-buttons-group": "^2.2.11",
     "react-native-reanimated": "~2.3.1",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
@@ -45,6 +47,7 @@
     "react-native-web": "0.17.1",
     "react-native-whc-calendar": "^1.0.6",
     "react-redux": "^7.2.8",
+    "react-router-dom": "^6.3.0",
     "redux": "^4.1.2",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1"
