@@ -11,23 +11,23 @@ import {
     FormControl,
     CheckIcon,
     Box,
-
 } from "native-base";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react'
 import DatePicker from 'react-native-datepicker';
 import CheckBox from "expo-checkbox";
 
-const ChooseDateScreen = ({ route, navigation, service }) => {
+const ChooseDateScreen = ({ route }) => {
     const {
         brand,
         model,
         image,
         grade,
         rating,
-        basicPrice
+        basicPrice,
+        service
     } = route.params;
-    const place = service; 
+    console.log(service);
     const Star = require("../assets/Star.png");
 
 
@@ -205,7 +205,7 @@ const ChooseDateScreen = ({ route, navigation, service }) => {
                         <Text bold fontSize="xs" color="#707070">
                             取車地點
                         </Text>
-                        <Text bold>{place}</Text>
+                        <Text bold>{service}</Text>
                     </VStack>
                     <HStack>
                         <CheckBox

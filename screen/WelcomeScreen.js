@@ -10,8 +10,8 @@ const WelcomeScreen = ({ navigation }) => {
             <VStack>
                 <LottieView  source={require("../assets/welcomeTop.json")} autoPlay loop="false" style={(styles.topLottie)} />
                 <Image source={require("../assets/splash.png")} alt="Logo" style={(styles.logo)} />
-                <Button onPress={() => navigation.navigate('LoginScreen')}  backgroundColor="#fff" _text={{ color: "#F9595F" }}>會員登入</Button>
-                <Button onPress={()=>navigation.navigate('RegisterScreen')} backgroundColor="#fff" _text={{ color: "#F9595F" }}>會員註冊</Button>
+                <Button onPress={() => navigation.navigate('LoginScreen')}  borderRadius={10} mb={5} backgroundColor="#fff" _text={{ color: "#F9595F" }}>會員登入</Button>
+                <Button onPress={()=>navigation.navigate('RegisterScreen')} borderRadius={10} backgroundColor="#fff" _text={{ color: "#F9595F" }}>會員註冊</Button>
                 <LottieView source={require("../assets/welcomeBottom.json")} autoPlay loop="false" style={(styles.bottomLottie)} />
             </VStack>
         </Center>

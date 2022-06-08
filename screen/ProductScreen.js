@@ -33,7 +33,7 @@ const ProductScreen = ({ route, navigation }) => {
     basicPrice
   } = route.params;
   const Star = require("../assets/Star.png");
-  let [service, setService] = useState("");
+  const [service, setService] = useState("");
 
   const SelectShop = () => {
     return (
@@ -60,7 +60,15 @@ const ProductScreen = ({ route, navigation }) => {
       alert("請選擇店家");
 
     } else {
-      navigation.navigate('ChooseDateScreen', route.params, service);
+      navigation.navigate('ChooseDateScreen', {
+        brand: brand,
+        model: model,
+        image: image,
+        grade: grade,
+        rating: rating,
+        basicPrice: basicPrice,
+        service: service
+      });
     }
   };
   console.log(service);
