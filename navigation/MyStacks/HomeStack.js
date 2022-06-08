@@ -2,10 +2,10 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 //Home Stack Components
-import HomeScreen from '../screen/HomeScreen';
-import BrandScreen from '../screen/BrandScreen';
-import ProductScreen from '../screen/ProductScreen';
-import ChooseDateScreen from "../screen/ChooseDateScreen";
+import HomeScreen from '../../screen/HomeScreen';
+import BrandScreen from '../../screen/BrandScreen';
+import ProductScreen from '../../screen/ProductScreen';
+import ChooseDateScreen from "../../screen/ChooseDateScreen";
 
 //import community icon
 import IonIcons from 'react-native-vector-icons/Ionicons';

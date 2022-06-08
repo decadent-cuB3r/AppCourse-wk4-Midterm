@@ -2,7 +2,9 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeBaseProvider } from 'native-base';
-import Navigation from './navigation/DrawerNavigator';
+
+import Navigation from './navigation';
+import AuthScreen from './screen/AuthScreen';
 
 //import store
 import { Store } from './redux/store';

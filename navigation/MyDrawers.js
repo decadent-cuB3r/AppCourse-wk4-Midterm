@@ -4,8 +4,8 @@ import { createDrawerNavigator,DrawerContentScrollView,
     DrawerItem, } from '@react-navigation/drawer';
 
 //import Drawer components
-import TabNavigator from './TabNaviagator';
-import SettingStack from './SettingsStack';
+import TabNavigator from './MyTabs';
+import SettingStack from './MyStacks/SettingsStack';
 import {useState} from "react-native"
 
 //import Icons

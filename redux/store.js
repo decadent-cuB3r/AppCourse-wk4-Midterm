@@ -1,7 +1,9 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { persistStore, persistReducer } from 'redux-persist';
+import { configureStore } from '@reduxjs/toolkit';
+import accountReducer from "./accountSlice";
+
 
 import {
     colorModeReducer,
@@ -14,13 +16,19 @@ const persistConfig = {
 };
 
 
-const reducer = combineReducers({
-    favBike: addFavReducer,
+// const reducer = combineReducers({
+//     favBike: addFavReducer,
+// });
+
+export const Store = configureStore({
+    reducer: {
+        account: accountReducer,
+        settings: colorModeReducer,
+        favBike: addFavReducer,
+
+    },
+    devTools: process.env.NODE_ENV !== 'production',
+    middleware: [thunk]
 });
 
-export const Store = createStore(
-    reducer,
-    applyMiddleware(thunk),
-);
-
-export const persistor = persistStore(Store);
+persistStore(Store);

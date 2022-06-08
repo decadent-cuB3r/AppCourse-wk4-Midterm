@@ -4,11 +4,11 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {View} from 'react-native'
 //import Stacks for Tab component
-import HomeStack from './HomeStack';
-import ProfileStack from './ProfileStack';
-import ReservationStack from './ReservationStack';
-import FavoriteStack from './FavoriteStack';
-import LocationStack from './LocationStack';
+import HomeStack from './MyStacks/HomeStack';
+import ProfileStack from './MyStacks/ProfileStack';
+import ReservationStack from './MyStacks/ReservationStack';
+import FavoriteStack from './MyStacks/FavoriteStack';
+import LocationStack from './MyStacks/LocationStack';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon2 from 'react-native-vector-icons/Ionicons';

@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 //Profile Stack Components
-import SettingScreen from '../screen/SettingScreen';
+import SettingScreen from '../../screen/SettingScreen';
 
 //import Icon
 import IonIcons from "react-native-vector-icons/Ionicons";
