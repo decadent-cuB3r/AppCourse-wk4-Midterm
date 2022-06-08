@@ -76,7 +76,7 @@ export default class screens extends Component {
             title: "高雄前鎮分店",
             description: "地址；高雄市前鎮區康定路20巷12號",
             description2: "電話：02-22456982",
-            image: Images[3],
+            image: Images[4],
           },
         ],
         region: {
