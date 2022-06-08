@@ -44,11 +44,11 @@ const ProductScreen = ({ route, navigation }) => {
 
             endIcon: <CheckIcon size="4" />
           }} mt={1} onValueChange={itemValue => setService(itemValue)}>
-            <Select.Item label="台北大安分店" value="台北大安" />
-            <Select.Item label="新北三重分店" value="新北三重" />
-            <Select.Item label="台中西屯分店" value="台中西屯" />
-            <Select.Item label="桃園中壢分店" value="桃園中壢" />
-            <Select.Item label="高雄前鎮分店" value="高雄前鎮" />
+            <Select.Item label="台北大安分店" value="台北大安分店" />
+            <Select.Item label="新北三重分店" value="新北三重分店" />
+            <Select.Item label="台中西屯分店" value="台中西屯分店" />
+            <Select.Item label="桃園中壢分店" value="桃園中壢分店" />
+            <Select.Item label="高雄前鎮分店" value="高雄前鎮分店" />
           </Select>
         </Box>
       </Center>
@@ -71,7 +71,6 @@ const ProductScreen = ({ route, navigation }) => {
       });
     }
   };
-  console.log(service);
 
   return (
     <Center>
@@ -200,7 +199,7 @@ const ProductScreen = ({ route, navigation }) => {
             <SelectShop />
             <Button
               marginBottom={3}
-              colorScheme="red"
+              backgroundColor='#F9595F'
               onPress={CheckAndGo} >
               查看可租借日期
             </Button>

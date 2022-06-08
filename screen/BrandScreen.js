@@ -28,12 +28,12 @@ const BrandScreen = ({ route, navigation }) => {
                 </HStack>
                 <HStack justifyContent="space-between" marginRight="5%">
                     <Text bold fontSize="xl" marginLeft={5}>街車</Text>
-                    <Button size="sm" marginTop="1.5" paddingTop="0" paddingBottom="0" borderRadius={10} h={6} colorScheme="red">查看更多</Button>
+                    <Button size="sm" marginTop="1.5" paddingTop="0" paddingBottom="0" borderRadius={10} h={6} backgroundColor='#F9595F'>查看更多</Button>
                 </HStack>
                 <BrandScreenList data={nakedBikes} navigation={navigation} />
                 <HStack justifyContent="space-between" marginRight="5%">
                     <Text bold fontSize="xl" marginLeft={5}>跑車</Text>
-                    <Button size="sm" marginTop="1.5" paddingTop="0" paddingBottom="0" borderRadius={10} h={6} colorScheme="red">查看更多</Button>
+                    <Button size="sm" marginTop="1.5" paddingTop="0" paddingBottom="0" borderRadius={10} h={6} backgroundColor='#F9595F'>查看更多</Button>
                 </HStack>
                 <BrandScreenList data={raceBikes} navigation={navigation} />
                 <Text bold fontSize="xl" marginLeft={5}>速可達</Text>
