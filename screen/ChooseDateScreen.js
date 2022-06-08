@@ -1,74 +1,203 @@
-import React from "react";
-import { Center, Text, ScrollView } from "native-base";
-import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
-import { LocaleConfig } from 'react-native-calendars';
+import {
+    Center,
+    ScrollView,
+    AspectRatio,
+    Text,
+    Image,
+    HStack,
+    VStack,
+    Button,
+    Select,
+    FormControl,
+    CheckIcon,
+    Box
+} from "native-base";
+import { StyleSheet } from "react-native";
+import React, { useState } from 'react'
+import DatePicker from 'react-native-datepicker';
 
-LocaleConfig.locales['fr'] = {
-    monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-    monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
-    dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
-    dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-    today: 'Aujourd\'hui'
-};
-LocaleConfig.defaultLocale = 'fr';
+const ChooseDateScreen = ({ route, navigation }) => {
+    const {
+        brand,
+        model,
+        image,
+        grade,
+        rating,
+        basicPrice
+    } = route.params;
 
-const ChooseDateScreen = ({ navigation }) => {
+    const Star = require("../assets/Star.png");
+    let [service, setService] = React.useState("");
+
+    const [date, setDate] = useState('09-10-2020');
     return (
-        <Calendar
+        <Center>
+            <ScrollView
+                width="90%"
+                showsVerticalScrollIndicator={false}
+            >
+                <VStack marginTop={2}>
+                    <HStack justifyContent="space-between">
+                        <Text bold fontSize="md" color="#989898">
+                            {brand}
+                        </Text>
+                        <HStack>
+                            <Image source={Star} alt="star" marginTop={1.5} marginRight={1} />
+                            <Text bold fontSize="md">
+                                {rating}
+                            </Text>
+                        </HStack>
+                    </HStack>
+                    <HStack justifyContent="space-between">
+                        <Text bold fontSize="xl">
+                            {model}
+                        </Text>
+                        <Text bold fontSize="md" marginTop={1}>
+                            {grade}
+                        </Text>
+                    </HStack>
+                </VStack>
+                <AspectRatio w="300">
+                    <Image
+                        source={{ uri: image }}
+                        width="330"
+                        marginLeft={2}
+                        alt="Picture of bike"
+                    />
+                </AspectRatio>
+                <VStack w="95%" marginLeft="3%">
+                    <Text bold fontSize="xs" color="#707070">
+                        取車日期
+                    </Text>
+                    <Text bold fontSize="xs" color="#707070">
+                        還車日期
+                    </Text>
+                    <Text bold fontSize="xs" color="#707070">
+                        費用計算
+                    </Text>
+                    <HStack
+                        justifyContent="space-between"
+                    >
+                        <Text bold fontSize="sm">
+                            基本金額
+                        </Text>
+                        <HStack>
+                            <Text bold>TWD</Text>
+                            <Text bold color="#F9595F">{basicPrice}</Text>
+                        </HStack>
+                    </HStack>
+                    <HStack
+                        justifyContent="space-between"
+                        borderBottomWidth={1}
+                        borderBottomColor="#707070"
+                        paddingBottom="1"
+                        marginBottom={1}
+                    >
+                        <Text bold fontSize="sm">
+                            安心方案
+                        </Text>
+                        <HStack>
+                            <Text bold>TWD</Text>
+                            <Text bold color="#F9595F">300</Text>
+                        </HStack>
+                    </HStack>
+                    <HStack
+                        justifyContent="space-between"
+                    >
+                        <Text bold fontSize="sm">
+                            總計
+                        </Text>
+                        <HStack>
+                            <Text bold>TWD</Text>
+                            <Text bold color="#F9595F">{basicPrice}</Text>
+                        </HStack>
+                    </HStack>
+                    <VStack
+                        justifyContent="space-between"
+                        borderBottomWidth={1}
+                        borderBottomColor="#707070"
+                        paddingBottom="2"
+                        marginBottom={2}
+                    >
+                        <Text bold fontSize="xs" color="#707070">
+                            里程費用
+                        </Text>
+                        <Text bold>第1至50公里: TWD 10/公里</Text>
+                        <Text bold>第51至150公里: TWD 8/公里</Text>
+                        <Text bold>第151公里以上: TWD 6/公里</Text>
+                    </VStack>
+                    <VStack
+                        justifyContent="space-between"
+                        borderBottomWidth={1}
+                        borderBottomColor="#707070"
+                        paddingBottom="2"
+                        marginBottom={2}
+                    >
+                        <Text bold fontSize="xs" color="#707070">
+                            取車地點
+                        </Text>
+                        <Text bold>第1至50公里: TWD 10/公里</Text>
+                    </VStack>
+                   
+                    <DatePicker
+                        style={styles.datePickerStyle}
+                        date={date} //initial date from state
+                        mode="date" //The enum of date, datetime and time
+                        placeholder="select date"
+                        format="DD-MM-YYYY"
+                        minDate="01-01-2016"
+                        maxDate="01-01-2019"
+                        confirmBtnText="Confirm"
+                        cancelBtnText="Cancel"
+                        customStyles={{
+                            dateIcon: {
+                                //display: 'none',
+                                position: 'absolute',
+                                left: 0,
+                                top: 4,
+                                marginLeft: 0,
+                            },
+                            dateInput: {
+                                marginLeft: 36,
+                            },
+                        }}
+                        onDateChange={(date) => {
+                            setDate(date);
+                        }}
+                    />
+                    <VStack>
 
-            // Initially visible month. Default = now
-            current={'2022-04-14'}
-            // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
-            minDate={'2022-04-14'}
-            // Maximum date that can be selected, dates after maxDate will be grayed out. Default = undefined
-            maxDate={'2022-05-30'}
-            // Handler which gets executed on day press. Default = undefined
-            onDayPress={day => {
-                console.log('selected day', day);
-            }}
-            // Handler which gets executed on day long press. Default = undefined
-            onDayLongPress={day => {
-                console.log('selected day', day);
-            }}
-            pagingEnabled={true}
-            // Month format in calendar title. Formatting values: http://arshaw.com/xdate/#Formatting
-            monthFormat={'yyyy MM'}
-            // Handler which gets executed when visible month changes in calendar. Default = undefined
-            onMonthChange={month => {
-                console.log('month changed', month);
-            }}
-            // Hide month navigation arrows. Default = false
-            hideArrows={false}
-            // Enable the option to swipe between months. Default = false
-            enableSwipeMonths={true}
+                        <Button
+                            marginBottom={3}
+                            colorScheme="red"
+                            onPress={""} >
+                            前往付款
+                        </Button>
+                    </VStack>
+                </VStack>
+            </ScrollView>
+        </Center>
+    );
+};
 
-            markedDates={{
-                '2022-04-16': { disabled: true, disableTouchEvent: true },
-                '2022-05-02': { disabled: true, disableTouchEvent: true },
-                '2022-04-20': { disabled: true, disableTouchEvent: true },
-                '2022-04-21': { disabled: true, disableTouchEvent: true }
-            }}
 
-            style={{ height: 300, width: "100%", justifyContent: "center" }}
-            theme={{
-                backgroundColor: "#ffffff",
-                calendarBackground: "#ffffff",
-                todayTextColor: "#f9595f",
-                dayTextColor: "#F9595F",
-                textDisabledColor: "#989898",
-                monthTextColor: "#f9595f",
-                arrowColor: "#F9595F",
-                textDayFontWeight: "300",
-                textMonthFontWeight: "bold",
-                textDayHeaderFontWeight: "500",
-                textDayFontSize: 16,
-                textMonthFontSize: 20,
-                selectedDayBackgroundColor: "#f9595f",
-                selectedDayTextColor: "#f9595f",
-                textDayHeaderFontSize: 14
-            }}
-        />
-    )
-}
+
+const styles = StyleSheet.create({
+    boxWrapper: {
+        alignItems: "center",
+        width: "95%",
+        height: 170,
+        backgroundColor: "#fff",
+        borderRadius: 20,
+        marginLeft: "3%",
+        marginTop: 10,
+        marginBottom: 10,
+        shadowOpacity: 0.3,
+        shadowOffset: {
+            height: 0,
+            width: 0,
+        },
+    },
+});
 
 export default ChooseDateScreen;

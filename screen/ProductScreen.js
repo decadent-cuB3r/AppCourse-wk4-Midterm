@@ -56,7 +56,7 @@ const ProductScreen = ({ route, navigation }) => {
     if (service == ""){
       alert("請選擇店家");
     } else {
-      navigation.navigate('ChooseDateScreen');
+      navigation.navigate('ChooseDateScreen', route.params);
     }
 };
 
