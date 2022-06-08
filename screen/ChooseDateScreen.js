@@ -10,13 +10,15 @@ import {
     Select,
     FormControl,
     CheckIcon,
-    Box
+    Box,
+
 } from "native-base";
 import { StyleSheet } from "react-native";
 import React, { useState } from 'react'
 import DatePicker from 'react-native-datepicker';
+import CheckBox from "expo-checkbox";
 
-const ChooseDateScreen = ({ route, navigation }) => {
+const ChooseDateScreen = ({ route, navigation, service }) => {
     const {
         brand,
         model,
@@ -25,11 +27,15 @@ const ChooseDateScreen = ({ route, navigation }) => {
         rating,
         basicPrice
     } = route.params;
-
+    const place = service; 
     const Star = require("../assets/Star.png");
-    let [service, setService] = React.useState("");
 
-    const [date, setDate] = useState('09-10-2020');
+
+    const [date, setDate] = useState('10-06-2022');
+    const [date2, setDate2] = useState('10-06-2022');
+    const [agree, setAgree] = useState(false);
+    const [agree2, setAgree2] = useState(false);
+
     return (
         <Center>
             <ScrollView
@@ -65,13 +71,76 @@ const ChooseDateScreen = ({ route, navigation }) => {
                         alt="Picture of bike"
                     />
                 </AspectRatio>
-                <VStack w="95%" marginLeft="3%">
-                    <Text bold fontSize="xs" color="#707070">
-                        取車日期
-                    </Text>
-                    <Text bold fontSize="xs" color="#707070">
-                        還車日期
-                    </Text>
+                <VStack w="95%" marginLeft="3%" >
+                    <HStack justifyContent="space-between"
+                        borderBottomWidth={1}
+                        borderBottomColor="#707070"
+                        paddingBottom="2"
+                        marginBottom={2}>
+                        <VStack>
+                            <Text bold fontSize="xs" color="#707070">
+                                取車日期(DD/MM/YYYY)
+                            </Text>
+                            <DatePicker
+                                style={styles.datePickerStyle}
+                                date={date} //initial date from state
+                                mode="date" //The enum of date, datetime and time
+                                placeholder="select date"
+                                format="DD-MM-YYYY"
+                                minDate="10-06-2022"
+                                maxDate="20-06-2022"
+                                confirmBtnText="Confirm"
+                                cancelBtnText="Cancel"
+                                customStyles={{
+                                    dateIcon: {
+                                        //display: 'none',
+                                        position: 'absolute',
+                                        left: 0,
+                                        top: 4,
+                                        marginLeft: 0,
+                                    },
+                                    dateInput: {
+                                        marginLeft: 36,
+                                    },
+                                }}
+                                onDateChange={(date) => {
+                                    setDate(date);
+                                }}
+                            />
+                        </VStack>
+                        <VStack>
+                            <Text bold fontSize="xs" color="#707070">
+                                還車日期(DD/MM/YYYY)
+                            </Text>
+                            <DatePicker
+                                style={styles.datePickerStyle}
+                                date={date2} //initial date from state
+                                mode="date" //The enum of date, datetime and time
+                                placeholder="select date"
+                                format="DD-MM-YYYY"
+                                minDate="10-06-2022"
+                                maxDate="20-06-2022"
+                                confirmBtnText="Confirm"
+                                cancelBtnText="Cancel"
+                                customStyles={{
+                                    dateIcon: {
+                                        //display: 'none',
+                                        position: 'absolute',
+                                        left: 0,
+                                        top: 4,
+                                        marginLeft: 0,
+                                    },
+                                    dateInput: {
+                                        marginLeft: 36,
+                                    },
+                                }}
+                                onDateChange={(date2) => {
+                                    setDate2(date2);
+                                }}
+
+                            />
+                        </VStack>
+                    </HStack>
                     <Text bold fontSize="xs" color="#707070">
                         費用計算
                     </Text>
@@ -136,37 +205,33 @@ const ChooseDateScreen = ({ route, navigation }) => {
                         <Text bold fontSize="xs" color="#707070">
                             取車地點
                         </Text>
-                        <Text bold>第1至50公里: TWD 10/公里</Text>
+                        <Text bold>{place}</Text>
                     </VStack>
-                   
-                    <DatePicker
-                        style={styles.datePickerStyle}
-                        date={date} //initial date from state
-                        mode="date" //The enum of date, datetime and time
-                        placeholder="select date"
-                        format="DD-MM-YYYY"
-                        minDate="01-01-2016"
-                        maxDate="01-01-2019"
-                        confirmBtnText="Confirm"
-                        cancelBtnText="Cancel"
-                        customStyles={{
-                            dateIcon: {
-                                //display: 'none',
-                                position: 'absolute',
-                                left: 0,
-                                top: 4,
-                                marginLeft: 0,
-                            },
-                            dateInput: {
-                                marginLeft: 36,
-                            },
-                        }}
-                        onDateChange={(date) => {
-                            setDate(date);
-                        }}
-                    />
+                    <HStack>
+                        <CheckBox
+                            value={agree}
+                            onValueChange={() => setAgree(!agree)}
+                            color={agree ? "#F9595F" : undefined}
+                            marginBottom={10}
+                        />
+                        <Text style={styles.agreetext}>
+                        我已閱讀並同意<Text style={styles.redtext} bold>租賃相關規定</Text>
+                        </Text>
+                        
+                    </HStack>
+                    <HStack>
+                        <CheckBox
+                            value={agree2}
+                            onValueChange={() => setAgree2(!agree2)}
+                            color={agree2 ? "#F9595F" : undefined}
+                            marginBottom={10}
+                        />
+                        <Text style={styles.agreetext}>
+                        未滿20歲者租車需<Text style={styles.redtext} bold>監護人同意書</Text>
+                        </Text>
+                        
+                    </HStack>
                     <VStack>
-
                         <Button
                             marginBottom={3}
                             colorScheme="red"
@@ -198,6 +263,14 @@ const styles = StyleSheet.create({
             width: 0,
         },
     },
+    agreetext: {
+        marginLeft: 5 ,
+        fontSize: 14
+    },
+    redtext: {
+        color: "#F9595F"
+        
+    }
 });
 
 export default ChooseDateScreen;

@@ -15,6 +15,7 @@ import {
 import { StyleSheet } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import { useState } from "react";
 
 const ProductScreen = ({ route, navigation }) => {
   const {
@@ -32,33 +33,37 @@ const ProductScreen = ({ route, navigation }) => {
     basicPrice
   } = route.params;
   const Star = require("../assets/Star.png");
-  let [service, setService] = React.useState("");
+  let [service, setService] = useState("");
 
   const SelectShop = () => {
-    return <Center>
-      <Box w="100%" maxW="400" marginBottom={3}>
-        <Select selectedValue={service} minWidth="200" fontSize="14" fontWeight="bold" accessibilityLabel="Choose Service" placeholder="請選擇取車地點" _selectedItem={{
-          bg: "#F9595F",
+    return (
+      <Center>
+        <Box w="100%" maxW="400" marginBottom={3}>
+          <Select selectedValue={service} minWidth="200" fontSize="14" fontWeight="bold" accessibilityLabel="Choose Service" placeholder="請選擇取車地點" _selectedItem={{
+            bg: "#F9595F",
 
-          endIcon: <CheckIcon size="4" />
-        }} mt={1} onValueChange={itemValue => setService(itemValue)}>
-          <Select.Item label="台北大安分店" value="台北大安" />
-          <Select.Item label="新北三重分店" value="新北三重" />
-          <Select.Item label="台中西屯分店" value="台中西屯" />
-          <Select.Item label="桃園中壢分店" value="桃園中壢" />
-          <Select.Item label="高雄前鎮分店" value="高雄前鎮" />
-        </Select>
-      </Box>
-    </Center>;
+            endIcon: <CheckIcon size="4" />
+          }} mt={1} onValueChange={itemValue => setService(itemValue)}>
+            <Select.Item label="台北大安分店" value="台北大安" />
+            <Select.Item label="新北三重分店" value="新北三重" />
+            <Select.Item label="台中西屯分店" value="台中西屯" />
+            <Select.Item label="桃園中壢分店" value="桃園中壢" />
+            <Select.Item label="高雄前鎮分店" value="高雄前鎮" />
+          </Select>
+        </Box>
+      </Center>
+    );
   };
 
   const CheckAndGo = () => {
-    if (service == ""){
+    if (service == "") {
       alert("請選擇店家");
+
     } else {
-      navigation.navigate('ChooseDateScreen', route.params);
+      navigation.navigate('ChooseDateScreen', route.params, service);
     }
-};
+  };
+  console.log(service);
 
   return (
     <Center>
