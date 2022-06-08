@@ -12,19 +12,22 @@ import {
    Pressable,
    useColorMode,
 } from "native-base";
-import Animated, {
+import Animated,
+{
    useAnimatedStyle,
    useSharedValue,
    withRepeat,
    withTiming,
    Easing,
-} from 'react-native-reanimated'; import { StyleSheet } from "react-native";
+} from 'react-native-reanimated';
+import { StyleSheet } from "react-native";
 import { useDispatch } from "react-redux";
 import { gotoRegister, loginAsync } from "../redux/accountSlice";
+import WelcomeScreen from "./WelcomeScreen";
 
 const AnimatedButton = Animated.createAnimatedComponent(Button);
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
    const dispatch = useDispatch();
    const [loginRequest, setLoginRequest] = useState(false);
    const [email, setEmail] = useState();
@@ -78,35 +81,37 @@ const LoginScreen = () => {
 
    const goToRegister = () => {
       dispatch(gotoRegister())
+      navigation.navigate('RegisterScreen')
    }
 
    return (
       <Center w="100%" flex={1}
          _dark={{ bg: "blueGray.900" }}
-         _light={{ bg: "white" }}
+         _light={{ bg: "#F9595F" }}
       >
          <Box safeArea p="2" py="8" w="90%" maxW="290">
             <VStack alignItems={'center'} mb="4">
-               <Heading size="lg" fontWeight="600" color="coolGray.800" _dark={{
+               <Heading size="lg" fontWeight="600" color="white" _dark={{
                   color: "warmGray.50"
                }}>
-                  SIGN IN
-               </Heading>             
+                  會員登入
+               </Heading>
             </VStack>
 
             <VStack space={3} mt="5">
                <FormControl>
-                  <FormControl.Label>Email ID</FormControl.Label>
+                  <FormControl.Label _text={{ color: "white" }}>電子郵件</FormControl.Label>
                   <Input value={email}
                      onChangeText={email => setEmail(email)} />
                </FormControl>
                <FormControl>
-                  <FormControl.Label>Password</FormControl.Label>
+                  <FormControl.Label _text={{ color: "white" }}>密碼</FormControl.Label>
                   <Input type="password" value={password}
-                     onChangeText={password => setPassword(password)} />
+                     onChangeText={password => setPassword(password)}
+                     style={{ borderRadius: 10, borderColor: "white" }} />
                </FormControl>
-               <AnimatedButton mt="12" h="10" w="100%" mx="auto" colorScheme="indigo"
-                  borderRadius={loginRequest ? 48 : null}
+               <AnimatedButton mt="12" h="10" w="100%" mx="auto" backgroundColor="white" size="md" _text={{ color: "#F9595F" }}
+                  borderRadius={loginRequest ? 48 : 10}
                   height={loginRequest ? "10" : null}
                   style={animatedButtonStyles}
                   onPress={onSignIn}
@@ -114,23 +119,18 @@ const LoginScreen = () => {
                   {
                      loginRequest
                         ? <Animated.View style={[styles.spinner, animatedSpinnerStyles]} />
-                        : 'Sign in'
+                        : '登入'
                   }
                </AnimatedButton>
-               <HStack mt="2" justifyContent="center" alignItems={"center"}>
-                  <Text fontSize="sm" color="coolGray.600" _dark={{
-                     color: "warmGray.200"
-                  }}>
-                     I'm a new user.{" "}
-                  </Text>
+               <Center>
                   <Pressable onPress={goToRegister}>
                      <Text
-                        color={colorMode == 'dark'? "indigo.300" : "indigo.500"}
+                        color="white"
                         fontWeight="medium"
-                        fontSize="xs"
-                     >Sign Up</Text>
+                        fontSize="md"
+                     >立即註冊</Text>
                   </Pressable>
-               </HStack>
+               </Center>
             </VStack>
          </Box>
       </Center>

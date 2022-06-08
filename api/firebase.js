@@ -32,12 +32,16 @@ export const login = async ({ email, password }) => {
   return user;
 }
 
-export const register = async ({ name, email, password }) => {
+export const register = async ({ name, id, birthday, phone, address, email, password }) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
     await updateProfile(auth.currentUser, {
       displayName: name,
+      userId: id,
+      userBirthday: birthday,
+      userPhone: phone,
+      userAddress: address
     })
     return user;
   } catch (e) {

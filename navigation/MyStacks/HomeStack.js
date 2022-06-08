@@ -63,11 +63,11 @@ const HomeStack = () => {
         }}
       />
       <Stack.Screen
+        name="ProductScreen"
+        component={ProductScreen}
         options={{
           title: ""
         }}
-        name="ProductScreen"
-        component={ProductScreen}
       />
       <Stack.Screen
         name="ChooseDateScreen"
