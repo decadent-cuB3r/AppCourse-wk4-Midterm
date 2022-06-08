@@ -17,7 +17,7 @@ import React, { useState } from 'react'
 import DatePicker from 'react-native-datepicker';
 import CheckBox from "expo-checkbox";
 
-const ChooseDateScreen = ({ route }) => {
+const ChooseDateScreen = ({ route,navigation }) => {
     const {
         brand,
         model,
@@ -35,14 +35,18 @@ const ChooseDateScreen = ({ route }) => {
     const [agree, setAgree] = useState(false);
     const [agree2, setAgree2] = useState(false);
     const [btn, setbtn] = useState(false);
-
+    const total = btn ? basicPrice:
+    parseInt(basicPrice) + 300 ;
 
     const CheckAndPay = () => {
         if (agree==false||agree2==false) {
           alert("請閱讀並勾選同意相關規定");
     
-        } else {
-          navigation.navigate('PaymentScreen', route.params, date ,date2);
+        }else if(date2<date) {
+            alert("還車日期不得小於租車日期");
+        }
+        else {
+          navigation.navigate('PaymentScreen', {date: date ,date2: date2, total: total});
         }
       };
     return (
@@ -200,8 +204,7 @@ const ChooseDateScreen = ({ route }) => {
                         <HStack>
                             <Text bold>TWD</Text>
                             <Text bold color="#F9595F">{
-                                btn ? basicPrice:
-                                    parseInt(basicPrice) + 300 
+                                total 
                             }</Text>
                         </HStack>
                     </HStack>

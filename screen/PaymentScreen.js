@@ -20,7 +20,7 @@ import CheckBox from "expo-checkbox";
 import RadioGroup from 'react-native-radio-buttons-group';
 
 const radioButtonsData = [{
-    id: 1, //主键是必须有的
+    id: 1, 
     label: 'Linepay',
     value: 'line',
     color: '#F9595F',
@@ -39,9 +39,14 @@ const radioButtonsData = [{
 }]
 
 
-const PaymentScreen = ({ date,date2 }) => {
+const PaymentScreen = ({ route }) => {
+    const {
+        date,
+        date2,
+        total
+    } = route.params;
 
-    const [btn, setbtn] = useState(false);
+
     const CheckAndGo = () => {
 
     };
@@ -72,19 +77,19 @@ const PaymentScreen = ({ date,date2 }) => {
                     <Text bold>訂金付款金額：</Text>
                     <HStack>
                         <Text bold>TWD</Text>
-                        <Text bold color="#F9595F">300</Text>
+                        <Text bold color="#F9595F">{total}</Text>
                     </HStack>
                 </HStack>
                 <HStack justifyContent="space-between"  marginBottom={2}>
                     <Text bold>租車開始日期(MM/DD/YYYY)：</Text>
                     <HStack>
-                        <Text bold color="#F9595F">10-06-2022{date}</Text>
+                        <Text bold color="#F9595F">{date}</Text>
                     </HStack>
                 </HStack>
                 <HStack justifyContent="space-between" marginBottom={2}>
                     <Text bold>租車結束日期(MM/DD/YYYY)：</Text>
                     <HStack>
-                        <Text bold color="#F9595F">10-06-2022{date2}</Text>
+                        <Text bold color="#F9595F">{date2}</Text>
                     </HStack>
                 </HStack>
                 <VStack>
