@@ -20,7 +20,7 @@ import Animated, {
    Easing,
 } from 'react-native-reanimated'; import { StyleSheet } from "react-native";
 import { useDispatch } from "react-redux";
-import { gotoRegister, loginAsync } from "../redux/accountSlice"
+import { gotoRegister, loginAsync } from "../redux/accountSlice";
 
 const AnimatedButton = Animated.createAnimatedComponent(Button);
 

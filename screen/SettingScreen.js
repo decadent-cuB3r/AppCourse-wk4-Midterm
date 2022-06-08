@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { Box, Center, Switch, HStack, Text, useColorMode } from 'native-base';
+import { Box, Center, Switch, HStack, Text, useColorMode, Button } from 'native-base';
 import { useTheme } from '@react-navigation/native';
+import { useDispatch } from 'react-redux';
+import { signOut } from '../redux/accountSlice';
 
 const SettingScreen = () => {
    const { colors } = useTheme();
    const { colorMode, toggleColorMode } = useColorMode();
    const [isEnabled, setIsEnabled] = useState(false);
    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+   const dispatch = useDispatch();
 
 
    return (
@@ -31,6 +34,14 @@ const SettingScreen = () => {
                   onToggle={toggleSwitch}
                />
             </HStack>
+
+         </Center>
+         <Center>
+            <Button mt={5} colorScheme="indigo" w="90%"
+               onPress={() => dispatch(signOut())}
+            >
+               Sign out
+            </Button>
          </Center>
       </Box>
 

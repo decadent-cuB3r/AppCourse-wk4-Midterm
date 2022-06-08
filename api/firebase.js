@@ -19,3 +19,33 @@ const firebaseConfig = {
 // Initialize Firebase
 const app_length = getApps().length > 0;
 const app = app_length ? getApp() : initializeApp(firebaseConfig);
+
+//REFERENCE AUTH
+const auth = app_length ? getAuth(app) :
+  initializeAuth(app, {
+    persistence: getReactNativePersistence(AsyncStorage)
+  });
+
+export const login = async ({ email, password }) => {
+  const userCredential = await signInWithEmailAndPassword(auth, email, password);
+  const user = userCredential.user;
+  return user;
+}
+
+export const register = async ({ name, email, password }) => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    await updateProfile(auth.currentUser, {
+      displayName: name,
+    })
+    return user;
+  } catch (e) {
+    console.log('error ...')
+    console.log(e)
+  }
+}
+
+export const logout = () => {
+  signOut(auth);
+}
