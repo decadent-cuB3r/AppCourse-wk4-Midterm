@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 
 import LoginScreen from "./LoginScreen";
 import RegisterScreen from "./RegisterScreen";
+
 import { selectLogin } from "../redux/accountSlice";
 
 const AuthScreen = () => {

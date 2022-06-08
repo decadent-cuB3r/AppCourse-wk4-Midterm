@@ -21,6 +21,7 @@ import Animated, {
 } from 'react-native-reanimated'; import { StyleSheet } from "react-native";
 import { useDispatch } from "react-redux";
 import { gotoRegister, loginAsync } from "../redux/accountSlice";
+import WelcomeScreen from "./WelcomeScreen";
 
 const AnimatedButton = Animated.createAnimatedComponent(Button);
 

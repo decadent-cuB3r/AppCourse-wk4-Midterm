@@ -4,7 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeBaseProvider } from 'native-base';
 
 import Navigation from './navigation';
-import AuthScreen from './screen/AuthScreen';
+import WelcomeScreen from './screen/WelcomeScreen';
 
 //import store
 import { Store } from './redux/store';
@@ -15,7 +15,7 @@ export default function App() {
     <Provider store={Store}>
       <NativeBaseProvider>
         <SafeAreaProvider>
-          <Navigation />
+          <WelcomeScreen />
         </SafeAreaProvider>
       </NativeBaseProvider>
     </Provider>
